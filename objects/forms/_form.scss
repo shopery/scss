@@ -1,0 +1,176 @@
+[class^='form'] {
+	label {
+		& {
+			text-align: left;
+			@include rem-fallback(font-size, $font-size-S);
+			@include opacity(.8);
+		}
+		&.checkbox {
+			@include opacity(1);
+		}
+	}
+	label[class|='icon'] {
+		min-width: inherit;
+		margin: 0;
+		span {
+			display: none;
+		}
+	}
+	legend {
+		& {
+			padding: 0 0 $spacing*2 0;
+			display: block;
+		}
+		[class|='icon'] {
+			margin-right: $spacing/2;
+		}
+	}
+	em {
+		font-size: .85em;
+		padding: $spacing/4 0;
+		display: inline-block;
+		@include opacity(.5);
+		font-style: normal;
+	}
+	> fieldset {
+		& {
+			border: 0px none;
+			padding: 0;
+			position: relative;
+			@include border-radius;
+			@include opacity-background($color-text, .1);
+			margin-bottom: $spacing;
+			padding: $spacing;
+		}
+		legend {
+			background: $color-text-background;
+			color: $color-text;
+			margin-left: 0;
+			padding: $spacing/4 $spacing/2;
+			@include border-radius;
+			border: 1px solid $color-box-light;
+		}
+	}
+	.label-button {
+		li {
+			display: inline-block;
+			margin-right: $spacing/2;
+		}
+		label {
+			cursor: pointer;
+		}
+		[class|='icon'] {
+			font-size: 2rem;
+			display: block;
+			margin: $spacing/4;
+		}
+	}
+	ul {
+		&.horizontal {
+			& {
+				background: rgba($color-text-background, .6);
+				padding: $spacing $spacing 0 $spacing;
+				@include border-radius;
+			}
+			li, input {
+				display: inline-block;
+			}
+			li {
+				margin-right: $spacing;
+			}
+		}
+	}
+	[class^='options'] {
+		label {
+			@include opacity(1);
+		}
+		li {
+			padding-bottom: $spacing/2;
+		}
+	}
+	.options-inline {
+		li {
+			display: inline-block;
+			margin: 0 $spacing $spacing/2 0;
+			padding: 0;
+		}
+
+	}
+	ol {
+		& {
+			padding: 0;
+			margin: 0;
+		}
+		& > li {
+			list-style: none;
+			display: block;
+			padding: 0 0 $spacing;
+		}
+
+	}
+	li.error {
+		input {
+			border: 1px solid $color-ko;
+			background: adjust-lightness($color-ko, 35%);
+		}
+	}
+	p.error {
+		color: $color-ko;
+	}
+	.pre-input {
+		display: inline-block;
+	}
+}
+
+%field {
+	& {
+		display: block;
+		padding: $spacing/2 $spacing/2;
+		font-size: 1em;
+		border: 1px solid $color-box;
+		border: 1px solid rgba($color-text, .3);
+		background: $color-text-background;
+		@include border-radius($default-border-radius-input);
+		@include box-sizing(border-box);
+		@include box-shadow(inset 0 1px 1px rgba($color-text,.1),0 1px 1px rgba($color-text-background,.5))
+	}
+	&:focus {
+		border-color: $color-warning;
+		background: $color-focus;
+		outline: none;
+	}
+}
+
+input[type='text'], input[type='url'], input[type='password'], input[type='phone'], input[type='email'] {
+	@extend %field;
+	width: 100%;
+}
+
+input[type='range'] {
+	display: block;
+	width: 100%;
+}
+
+input[type='date'], input[type='datetime-local'], input[type='month'], input[type='number'] {
+	@extend %field;
+	width: 100%;
+	max-width: 300px;
+}
+
+input[type='radio'] {
+	display: inline-block;
+}
+
+.input-file {
+	display: block;
+	@extend %field;
+}
+
+textarea {
+	width: 100%;
+	@extend %field;
+}
+
+select {
+	@extend %field;
+}

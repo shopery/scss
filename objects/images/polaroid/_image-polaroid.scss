@@ -1,0 +1,14 @@
+img.polaroid {
+	@extend %images-polaroid;
+}
+
+a.polaroid {
+	& {
+		text-decoration:none;
+		display:inline-block;
+		@extend %images-polaroid;
+	}
+	&.left, &.right {
+		margin-bottom:$spacing;
+	}
+}

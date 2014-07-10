@@ -1,0 +1,44 @@
+/* Do not edit below here */
+
+// Variables defined to assure compilation
+$color-text-light: $color-text !default;
+$color-text-dark: $color-text !default;
+$color-primary-light: $color-primary !default;
+$color-primary-dark: $color-primary !default;
+$color-secondary-light: $color-secondary !default;
+$color-secondary-dark: $color-secondary !default;
+$color-box-light: $color-box !default;
+$color-box-dark: darken($color-box, 10%) !default;
+$color-box-invert: #40484b !default;
+/*
+@if ( brightness( $color-text ) < 20% ) {
+	$color-text-light: lighten( $color-text , 70% );
+	$color-text-dark: darken( $color-text , 55% );
+} @else {
+	$color-text-light: darken( $color-text , 25% );
+	$color-text-dark: lighten( $color-text , 25% );
+}*/
+
+@if ( brightness( $color-primary ) > 30% ) {
+	$color-primary-light: lighten( $color-primary , 15% ) !default;
+	$color-primary-dark: darken( $color-primary , 15% ) !default;
+} @else {
+	$color-primary-light: darken( $color-primary , 15% ) !default;
+	$color-primary-dark: lighten( $color-primary , 15% ) !default;
+}
+
+@if ( brightness( $color-secondary ) > 30% ) {
+	$color-secondary-light: lighten( $color-secondary , 10% ) !default;
+	$color-secondary-dark: darken( $color-secondary , 10% ) !default;
+} @else {
+	$color-secondary-light: darken( $color-secondary , 10% ) !default;
+	$color-secondary-dark: lighten( $color-secondary , 10% ) !default;
+}
+
+@if ( brightness( $color-box ) > 30% ) {
+	$color-box-light: lighten( $color-box , 10% ) !default;
+	$color-box-dark: darken( $color-box , 15% ) !default;
+} @else {
+	$color-box-light: darken( $color-box , 15% ) !default;
+	$color-box-dark: lighten( $color-box , 15% ) !default;
+}

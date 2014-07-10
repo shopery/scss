@@ -1,0 +1,69 @@
+.cart {
+	& {
+		position:relative;
+		padding:$spacing/2;
+		background:$color-box;
+		@include border-radius;
+	}
+	.item-custom {
+		& {
+			display:block;
+		}
+	}
+	.actions {
+		padding:$spacing/2 $spacing/2 $spacing/4;
+		text-align:right;
+	}
+}
+
+
+#cart-list {
+	position:absolute;
+	min-width:300px;
+	z-index:9999;
+	color:$color-text;
+	font-family:"FreightSansMedium", sans-serif;
+	@include border-radius;
+	@include box-shadow(0 1px 3px rgba($color-text,.5));
+	@include background($color-text-background);
+}
+
+#cart-list .itemRow{
+	border-bottom:1px solid $color-box;
+	padding:$spacing/2;
+	overflow:hidden;
+}
+#cart-list .itemRow div{
+	float:left;
+}
+#cart-list .item-custom{
+	width:35px;
+	margin-right:$spacing/8;
+}
+#cart-list .item-custom span{
+	float:left;
+	display:inline-block;
+	text-align:right;
+	width:20px;
+}
+#cart-list .item-custom div{
+	float:left;
+	height:13px;
+	margin-left:3px;
+}
+#cart-list .simpleCart_increment,
+#cart-list .simpleCart_decrement{
+	line-height:1;
+	display:block;
+	height:$spacing/3;
+}
+#cart-list .item-name{
+	float:left;
+	width:190px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+#cart-list .itemRow .item-total{
+	float:right;
+}

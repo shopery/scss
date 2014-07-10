@@ -1,0 +1,27 @@
+//	Description:
+//	Provides a common system for setting text properties between HTML elements.
+//	If you need more classes related to text is only allow used the emmet references.
+
+//	Usage:
+//	Mark the element with the desired text class.
+
+//	Reference:
+//	http://docs.emmet.io/cheat-sheet/
+
+
+//	Text align
+.ta-l {
+	text-align: left !important;
+}
+
+.ta-c {
+	text-align: center !important;
+}
+
+.ta-r {
+	text-align: right !important;
+}
+
+.td-u {
+	text-decoration:underline !important;
+}

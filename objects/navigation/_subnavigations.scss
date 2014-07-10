@@ -1,0 +1,41 @@
+.subnavigation, .subnavigation-vertical {
+	& {
+		position:relative;
+		overflow:hidden;
+		width:100%;
+	}
+	> ul {
+		ul {
+			& {
+				border-top:1px dotted $color-box;
+				border-bottom:1px dotted $color-box;
+				padding:0;
+				margin:0 $spacing;
+			}
+			a {
+				padding:$spacing/4 $spacing;
+			}
+		}
+	}
+	li {
+		& {
+			float:left;
+		}
+		a {
+			& {
+				display:block;
+				padding:$spacing/2 $spacing;
+				text-decoration:none;
+			}
+		}
+	}
+
+}
+
+.subnavigation-vertical {
+	@extend %vertical-nav;
+	li {
+		display:block;
+	}
+}
+

@@ -1,0 +1,37 @@
+// ------------------------------
+// MAIN PACKAGE
+// CORE CSS framework
+//
+// ------------------------------
+
+// INTERNAL CORE CSS IMPORT
+// BASE
+
+@import 'basic-tools';
+
+@import "objects/forms/_form-search-ie";
+
+form {
+  legend {
+	margin-bottom: $spacing;
+  }
+  input[type='date'], input[type='datetime-local'], input[type='month'], input[type='number'] {
+	display:inline-block !important;
+  }
+}
+
+.mobile, .tablet {
+	display:none !important;
+}
+
+.desktop {
+	display:block !important;
+}
+
+.navigation, .navigation-vertical, .subnavigation-vertical, .subnavigation {
+	display:block;
+}
+
+[class*='box-'] {
+	display:block;
+}

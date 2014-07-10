@@ -1,0 +1,45 @@
+//	Description:
+//	Provides a common system for setting border properties between HTML elements.
+//	If you need more classes related to border is only allow used the emmet references.
+
+//	Usage:
+//	Mark the element with the desired border class.
+
+//	Complete acronym reference
+
+//	FIRST LETTERS
+//	bd = border
+
+//	SECOND LETTERS
+//	a = all
+//	t = top
+//	r = right
+//	b = bottom
+//	l = left
+//	h = horizontal
+//	v = vertical
+
+//	Reference:
+//	http://docs.emmet.io/cheat-sheet/
+
+
+//	Border
+.bda-n {
+	border: 0 !important;
+}
+
+.bdt-n, .bdv-n {
+	border-top: 0 !important;
+}
+
+.bdb-n, .bdv-n {
+	border-bottom: 0 !important;
+}
+
+.bdr-n, .bdh-n {
+	border-right: 0 !important;
+}
+
+.bdl-n, .bdh-n {
+	border-left: 0 !important;
+}

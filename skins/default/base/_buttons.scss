@@ -1,0 +1,100 @@
+/* @group BUTTON COLOR */
+.button, .button_s {
+	@include opacity-background($color-text, .25);
+	color:$color-text-background;
+	@include text-shadow(0 1px rgba($color-text, .3));
+}
+.button:hover {
+	@include opacity-background($color-text, .20);
+}
+
+.button:active {
+	@include opacity-background($color-text, .15);
+}
+
+.button-main {
+	background:$color-primary;
+	color:$color-text-background;
+	@include text-shadow(0 1px rgba($color-text, .3));
+}
+
+.button-main:hover {
+	@include opacity-background($color-primary, .8);
+}
+
+.button-main:active {
+	@include opacity-background($color-primary, .7);
+}
+
+.button-alt {
+	background:$color-secondary;
+	color:$color-text-background;
+	@include text-shadow(0 1px rgba($color-text, .3));
+}
+
+.button-alt:hover {
+	@include opacity-background($color-secondary, .8);
+}
+
+.button-alt:active {
+	@include opacity-background($color-secondary, .7);
+}
+
+.button-ok {
+	background:$color-ok;
+	color:$color-text-background;
+	@include text-shadow(0 1px rgba($color-text, .3));
+}
+
+.button-ok:hover {
+	@include opacity-background($color-ok, .8);
+}
+
+.button-ok:active {
+	@include opacity-background($color-ok, .7);
+}
+
+.button-ko {
+	background:$color-ko;
+	color:$color-text-background;
+	@include text-shadow(0 1px rgba($color-text, .3));
+}
+
+.button-ko:hover {
+	@include opacity-background($color-ko, .8);
+}
+
+.button-ko:active {
+	@include opacity-background($color-ko, .7);
+}
+
+/* @endgroup BUTTON COLOR */
+
+/* @group DISABLED */
+.button-disabled,
+.button-disabled:hover {
+  border:1px solid #ccc;
+  @include box-shadow(inset 0 -1px 2px 0 rgba(0, 0, 0, .1), 1px 1px 3px rgba(0, 0, 0, .1));
+  @include text-shadow(1px 1px 1px #ddd);
+  background:#eee;
+  color:#ccc;
+  cursor:default;
+  pointer-events:none;
+}
+
+
+[class^='button'] {
+ & {
+   font-weight:bold;
+   font-family: $font-face-title;
+   @include rem-fallback(font-size, $font-size-default);
+ }
+  &.small {
+	font-family: $font-face-default;
+	font-weight:normal;
+  }
+  &.large {
+	@include rem-fallback(font-size, $font-size-M);
+  }
+}
+/* @endgroup DISABLED */

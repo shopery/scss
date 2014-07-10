@@ -1,0 +1,54 @@
+//	Description:
+//	Provides a common system for setting visual formatting between properties HTML elements.
+//	If you need more classes related to visual formatting is only allow used the emmet references.
+
+//	Usage:
+//	Mark the element with the desired visual formatting class.
+
+//	Reference:
+//	http://docs.emmet.io/cheat-sheet/
+
+
+//	Floats
+.fl {
+	float: left !important;
+}
+.fl-n {
+	float: none !important;
+}
+.fl-l {
+	float: left !important;
+}
+.fl-r {
+	float: right !important;
+}
+
+//	Displays
+.d-n {
+	display: none !important;
+}
+.d-b {
+	display: block !important;
+}
+.d-i {
+	display: inline !important;
+}
+.d-ib {
+	display: inline-block !important;
+}
+
+.o-h {
+	overflow:hidden  !important;
+}
+
+.o-v {
+	overflow:visible !important;
+}
+
+$measures: 5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100;
+
+@each $measure in $measures {
+	.w-#{$measure} {
+		width: 0% + $measure !important;
+	}
+}

@@ -1,0 +1,13 @@
+.msg-info {
+	& {
+		border-color:$color-info;
+		@include opacity-background($color-info, .1);
+	}
+	i {
+		color: $color-info;
+	}
+	&:before {
+		content: '\f129';
+		color: $color-info;
+	}
+}

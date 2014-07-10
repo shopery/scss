@@ -1,0 +1,63 @@
+/* @group BUTTON COLOR */
+.button, .button_s {
+	@include background-image(linear-gradient($color-box 30%, $color-box-dark 70%));
+	@include gradient-ie($color-box, $color-box-dark);
+	border: 1px solid $color-box-dark;
+	color: $color-text;
+}
+
+.button-main {
+	@include background-image(linear-gradient($color-primary-light 20%, $color-primary 80%));
+	@include gradient-ie($color-primary-light, $color-primary);
+	border: 1px solid $color-primary;
+	color: contrast-color($color-primary);
+}
+
+.button-alt {
+	@include background-image(linear-gradient($color-secondary-light 20%, $color-secondary 80%)); @include gradient-ie($color-secondary-light, $color-secondary);
+	border: 1px solid $color-secondary;
+	color: contrast-color($color-secondary);
+}
+
+.button-ok {
+	@include background-image(linear-gradient(lighten($color-ok, 10%) 20%, $color-ok 80%));
+	@include gradient-ie(lighten($color-ok, 10%), $color-ok);
+	border: 1px solid $color-ok;
+	color: $color-text-background;
+}
+
+.button-ko {
+	@include background-image(linear-gradient(lighten($color-ko, 10%) 20%, $color-ko 80%));
+	@include gradient-ie(lighten($color-ko, 10%), $color-ko);
+	border: 1px solid $color-ko;
+	color: $color-text-background;
+}
+
+/* @endgroup BUTTON COLOR */
+
+[class*='button-'], .button {
+	& {
+		font-weight: bold;
+		font-family: $font-face-title;
+		padding: $font-size-M/3 $font-size-M;
+		@include rem-fallback(font-size, $font-size-M);
+		@include box-shadow(0px 1px 0px rgba($color-text, .5));
+	}
+	&:hover {
+		@include box-shadow(0px 1px 0px rgba($color-text, .5), inset 0 0 100px rgba($color-text-background, .5));
+	}
+	&:active {
+		@include box-shadow(inset 1px 1px 3px rgba($color-text, .5));
+	}
+	&.small {
+		font-family: $font-face-default;
+		padding: $font-size-S/2 $font-size-S;
+		font-weight: normal;
+	}
+	&.large {
+		padding: $font-size-L/2 $font-size-L;
+		@include rem-fallback(font-size, $font-size-L);
+	}
+}
+
+/* @endgroup DISABLED */

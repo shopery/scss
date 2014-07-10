@@ -1,0 +1,30 @@
+.c-text, .c-text:before, .c-text:after {
+	color: $color-text !important;
+}
+.c-text-light, .c-text-light:before, .c-text-light:after {
+	color: $color-text-light !important;
+}
+.c-background,.c-background:before, .c-background:after {
+	color: $color-text-background !important;
+}
+.c-main {
+	color: $color-primary !important;
+}
+.c-ko {
+	color: $color-ko !important;
+}
+.c-ok {
+	color: $color-ok !important;
+}
+
+.bg-box {
+	@extend %bg-box;
+}
+
+.bg-box-dark {
+	@extend %bg-box-dark;
+}
+
+.bg-background {
+	@extend %bg-background;
+}

@@ -1,0 +1,25 @@
+ul[class*='list-'], ul.list {
+	& {
+		list-style: disc outside;
+		padding-left: $spacing;
+	}
+	ul {
+		& {
+			list-style: circle;
+		}
+	}
+}
+
+ol[class*='list-'], ol.list {
+	list-style: decimal outside;
+	padding-left: $spacing;
+}
+
+dl[class*='list-'], dl.list {
+	dt {
+		color: $color-text-light;
+	}
+	dd {
+		margin-bottom: $spacing/4;
+	}
+}

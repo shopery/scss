@@ -1,0 +1,65 @@
+.navigation, .navigation-vertical {
+	& {
+		position:relative;
+		overflow:hidden;
+		width:100%;
+	}
+	&.small {
+		a {
+			padding:$spacing/4 $spacing/2;
+		}
+	}
+	li {
+		& {
+			float:left;
+		}
+		a {
+			display:block;
+			padding:$spacing/2 $spacing;
+			text-decoration:none;
+		}
+	}
+
+	> ul {
+		ul {
+			& {
+				position:absolute;
+				top:34px;
+				left:0;
+				z-index:999;
+				display:none;
+				margin:0;
+				padding:0;
+				width:150px;
+				@include box-shadow(1px 1px 3px 0 rgba(0, 0, 0, .5));
+			}
+			> li {
+				& {
+					margin:0;
+					border-bottom:1px solid $color-secondary;
+				}
+				> ul {
+					top:0;
+					left:165px;
+				}
+			}
+			a {
+				padding-bottom:8px;
+				width:125px;
+				height:auto;
+				border:0;
+				background-color:$color-text-light;
+			}
+		}
+		li:hover {
+			> ul {
+				display:block;
+			}
+		}
+	}
+}
+
+
+.navigation-vertical {
+	@extend %vertical-nav;
+}

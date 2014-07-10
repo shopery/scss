@@ -1,0 +1,8 @@
+.form-search {
+  input {
+	@include border-radius(0);
+  }
+  button, .button {
+	@include border-radius(0);
+  }
+}

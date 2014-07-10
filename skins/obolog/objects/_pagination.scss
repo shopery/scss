@@ -1,0 +1,19 @@
+.pagination {
+	a {
+		& {
+			color: $color-text;
+			@include opacity-background($color-text, .05);
+			border:1px solid $color-box;
+		}
+		&:hover {
+			background:$color-link;
+			color: contrast-color($color-link);
+		}
+	}
+	.active {
+		a {
+			background:$color-text-background;
+			color: $color-text;
+		}
+	}
+}

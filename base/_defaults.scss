@@ -1,0 +1,160 @@
+html {
+	height: 100%;
+	overflow: auto;
+}
+a {
+	color: $color-link;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration:underline;
+}
+
+/* @group SCROLLBAR */
+	.scroll::-webkit-scrollbar,
+	pre::-webkit-scrollbar,
+	textarea::-webkit-scrollbar {
+		width: 9px;
+		height: 10px;
+		background: none;
+	}
+
+		pre::-webkit-scrollbar-button,
+		textarea::-webkit-scrollbar-button,
+		.scroll::-webkit-scrollbar-button {
+			display: none;
+			background: none;
+		}
+
+		pre::-webkit-scrollbar-track,
+		.scroll::-webkit-scrollbar-track {
+			margin: 20px;
+		}
+
+		pre::-webkit-scrollbar-thumb,
+		textarea::-webkit-scrollbar-thumb,
+		.scroll::-webkit-scrollbar-thumb {
+			background-color: #CCC;
+		}
+
+		pre::-webkit-scrollbar-thumb:hover,
+		textarea::-webkit-scrollbar-thumb:hover,
+		.scroll::-webkit-scrollbar-thumb:hover {
+			background-color: #AAA;
+		}
+/* @endgroup SCROLLBAR */
+
+/* @group HELPERS */
+	.hidden {
+		display: none;
+	}
+	.hidden-soft {
+		display: none;
+	}
+	.visible,
+	.block {
+		display: block;
+	}
+	.invisible {
+		visibility: hidden;
+	}
+	.inline {
+		display: inline;
+	}
+	.inline-block {
+		@include inline-block;
+	}
+	.left-align {
+		text-align: left;
+	}
+	.right-align {
+		text-align: right;
+	}
+	.center-align {
+		text-align: center;
+	}
+	.center {
+		margin: 0 auto;
+	}
+	.float-left {
+		float: left;
+	}
+	.float-right {
+		float: right;
+	}
+	.no-pointer-events {
+		pointer-events: none;
+	}
+	.no-opacity {
+		opacity: 0;
+		pointer-events: none;
+	}
+	.txthide {
+		& {
+			@include inline-block;
+			overflow: hidden;
+			width: 1.1em;
+			vertical-align: bottom;
+			white-space: nowrap;
+		}
+		&:before {
+			@include inline-block;
+			text-align: center;
+		}
+	}
+	img,
+	object {
+		max-width: 100%;
+		height: auto;
+	}
+
+	/* @desc: Image replacement. More info on nicolasgallagher.com/another-css-image-replacement-technique */;
+	.ir {
+		font: 0/0 a;
+		text-shadow: none;
+		color: transparent;
+	}
+/* @endgroup HELPERS */
+
+/* @group CLEARFIX */
+	/* @desc: More info on: nicolasgallagher.com/micro-clearfix-hack/icolasgallagher.com/micro-clearfix-hack */;
+	.clearfix:before,
+	.clearfix:after {
+		display: table;
+		content: " ";
+	}
+	.clearfix:after {
+		clear: both;
+	}
+/* @endgroup CLEARFIX */
+
+ul, ol {
+	padding-left: 0;
+	list-style: none;
+}
+
+li > ul, li > ol {
+	margin-top: .5em;
+	margin-bottom: 0;
+}
+
+dd {
+	margin-left: 0;
+}
+
+nav ul, .nav {
+	margin-bottom: 0;
+	letter-spacing: -0.31em;
+	word-spacing: -0.43em;
+}
+
+nav li, .nav li {
+	display: inline-block;
+	letter-spacing: normal;
+	word-spacing: normal;
+}
+
+small {
+	@include rem-fallback(font-size, $font-size-XXS, true);
+	line-height: $font-line-height;
+}

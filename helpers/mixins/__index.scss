@@ -1,0 +1,33 @@
+// ------------------------------
+// MIXIN INDEX FILE
+//
+// instance: _root_
+// parent instance: none
+// ------------------------------
+
+// MIXIN IMPORT
+
+// Mixin for create backgrounds with a custom opacity
+@import "backgrounds";
+
+// Mixin for create cross-browser CSS opacity
+@import "opacity";
+
+@import "image-replacements";
+
+@import "placeholder_color";
+
+// Mixin for return the passed property/value in px and rem units
+@import "rem-fallback";
+
+// Mixin to put a font-size and its correct line-height
+@import "font-size";
+
+// Mixin for create a standard line-height property, depending of the font size
+@import "line-height";
+
+// Mixin for create a balloon in one side of a box
+@import "box-balloon";
+
+// Mixin to apply filter blur on all browsers
+@import "filter-blur";

@@ -1,0 +1,12 @@
+@import '_basic-tools.scss';
+
+@import "objects/forms/_form-search-ie.scss";
+
+[class^='form'] {
+  fieldset {
+	margin-top:$spacing*1.5 !important;
+  }
+  legend {
+	margin-top:-$spacing;
+  }
+}

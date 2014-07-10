@@ -1,0 +1,31 @@
+.form-search {
+	& {
+		position:relative;
+	}
+	input {
+		margin-right:150px;
+		@include border-radius;
+		padding:0 $spacing*4 0 $spacing/2;
+		height:$spacing*1.4;
+	}
+	button {
+		position:absolute;
+		top:2px;
+		right:2px;
+		margin:0;
+		min-width:33px;
+		padding:$spacing/7 $spacing/2;
+		@include border-radius(0 $default-border-radius $default-border-radius 0);
+	}
+}
+
+.navigation, .subnavigation {
+	.form-search {
+		font-family: $font-face-title;
+		@include rem-fallback(font-size, $font-size-M, true);
+		width:35%;
+		min-width:210px;
+		float:right;
+		margin:$spacing/4 $spacing/4 $spacing/4 0;
+	}
+}

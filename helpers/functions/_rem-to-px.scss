@@ -1,0 +1,12 @@
+// Returns the pixel equivalent for the REM passed value
+//
+// @param {String} Desired REM value to convert.
+//
+// @return {String} Value in px
+//
+
+	@function rem-to-px( $rem-value ) {
+	  $px-value : strip-unit( $rem-value ) * $px-to-em-proportions + "px";
+	  @return $px-value;
+	}
+

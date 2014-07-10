@@ -1,0 +1,16 @@
+img.circle, img.circle-s {
+	@extend %images-circle;
+}
+
+a.circle, a.circle-s {
+	& {
+		text-decoration:none;
+	}
+	img {
+		@extend %images-circle;
+	}
+}
+
+img.circle-s, a.circle-s img {
+	border-width: $spacing/4;
+}

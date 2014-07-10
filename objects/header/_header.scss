@@ -1,0 +1,59 @@
+%header-footer {
+	& {
+		width: 100%;
+		margin-bottom: $spacing;
+		background: $color-header;
+	  	color: $color-text-background;
+		min-height: $spacing*4;
+		position: relative;
+		padding-top: $spacing/2;
+	}
+  	& > a {
+	  color: $color-text-background;
+	}
+	.logo {
+		max-width:75%;
+	}
+}
+
+
+.header {
+	& {
+		@extend %header-footer;
+	}
+	.navigation {
+		border: 0px none;
+		@include box-shadow(none);
+	}
+}
+
+.footer {
+	& {
+		@extend  %header-footer;
+	}
+}
+
+/* @group HEADER */
+
+		/* @group LOGOUT */
+			.main-header .logout {
+				float: right;
+				@include background( linear-gradient( bottom, rgb( 106,106,106 ) 0, rgb( 143,143,143 ) 100% ) );
+			}
+			.main-header .logout a {
+				position: relative;
+				display: block;
+				padding: 5px 10px;
+				color: #000;
+			}
+			.main-header .logout a:hover {
+				background: inherit;
+				color: #EEE;
+				@include text-shadow( 0 0 5px #000 );
+			}
+			.main-header .logout a span {
+				font-size: 2em;
+				line-height: 125%;
+			}
+		/* @endgroup LOGOUT */
+/* @endgroup HEADER */

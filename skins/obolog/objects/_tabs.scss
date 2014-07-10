@@ -1,0 +1,48 @@
+/* @group TABS */
+	/* @group GENERIC TABS */
+
+.tabs {
+  & {
+  	padding: $spacing/4 $spacing/4 33px $spacing/4;
+	border-bottom: 1px solid $color-box;
+	@include border-radius;
+  }
+  li {
+	margin-right: $spacing/4;
+	a {
+	  padding: $spacing/4 $spacing;
+	  @include rem-fallback(font-size, $font-size-S);
+	  @include border-radius($default-border-radius $default-border-radius 0 0);
+	  &:hover {
+		background-color: $color-text-background;
+		text-decoration: none;
+	  }
+	}
+  }
+  .active a {
+	border-top-color: $color-primary;
+	background-color: $color-text-background;
+	border-top-width: 2px;
+	&:hover {
+	  border-top-color: $color-primary-dark;
+	}
+	strong {
+	  color: #942a16;
+	}
+	span {
+	  background-color: #913726;
+	  text-shadow: 0 1px 0 #61160d;
+	}
+  }
+}
+
+	/* @endgroup GENERIC TABS */
+
+	/* @group TABS DROPDOWN */
+		/* @group GENERIC AND LIGHT DROPDOWN */
+			.tabs > ul li:hover > a {
+				background-color: #FFF;
+			}
+		/* @endgroup GENERIC AND LIGHT DROPDOWN */
+	/* @endgroup TABS DROPDOWN */
+/* @endgroup TABS */

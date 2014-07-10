@@ -1,0 +1,17 @@
+.msg-ko {
+	& {
+		border-color:$color-ko;
+		@include opacity-background($color-ko, .1);
+	}
+	i {
+		color: adjust-lightness($color-ko, -25%);
+	}
+	i {
+		color: $color-ko;
+	}
+	&:before {
+		content: '\f00d';
+		color: $color-ko;
+
+	}
+}

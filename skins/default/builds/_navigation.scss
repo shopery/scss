@@ -1,0 +1,144 @@
+/* @group NAVIGATION */
+.navigation, .navigation-vertical {
+	& {
+		overflow:hidden;
+		background:$color-primary;
+	}
+	a {
+		& {
+			text-transform:uppercase;
+			color:$color-text-background;
+			margin:0;
+			@include box-shadow(0 0 2px rgba($color-primary-dark, .2), 0 0 2px rgba($color-primary-dark, .2));
+		}
+	}
+	li {
+		&.active {
+			margin:0;
+		}
+		&.active a {
+			@include opacity-background(contrast-color($color-primary-dark), .15);
+		}
+		a:hover {
+			background-color:$color-primary-light;
+			@include opacity-background(contrast-color($color-primary-dark), .3);
+		}
+	}
+}
+
+.navigation-vertical {
+	a:hover {
+		margin-left:1px;
+		margin-right:1px;
+	}
+}
+
+.subnavigation, .subnavigation-vertical {
+	& {
+		border-color:$color-box;
+		border-style:solid;
+		border-width:1px;
+		background:$color-box-light;
+	}
+	a {
+		& {
+			color:$color-text;
+		}
+		&:hover {
+			background-color:$color-text-background;
+			color:$color-text;
+		}
+		[class^='icon-'] {
+			@include opacity(.5);
+		}
+	}
+	.active {
+		& {
+			position:relative;
+		}
+		a {
+			& {
+				color:contrast-color($color-primary-dark);
+				background:$color-primary-dark;
+			}
+		}
+		ul {
+			& {
+				margin-left:$spacing;
+			}
+			a {
+				& {
+					font-weight:normal;
+					background-color:transparent;
+					color:$color-text;
+				}
+				&:hover {
+					background-color:$color-text-background;
+					color:$color-text;
+				}
+			}
+		}
+		.active {
+			a {
+				font-weight:bold;
+				background-color:transparent;
+				color:$color-text;
+			}
+		}
+	}
+}
+
+$arrow-size:8px;
+
+.subnavigation {
+	.active {
+		a {
+			&:after {
+				border:$arrow-size solid transparent;
+				border-style:outset outset solid outset;
+				border-bottom-color:$color-box;
+				bottom:0px;
+				content:"";
+				height:0;
+				left:50%;
+				margin-left:-$arrow-size;
+				overflow:hidden;
+				position:absolute;
+				width:0;
+			}
+			&:before {
+				border:$arrow-size solid transparent;
+				border-style:outset outset solid outset;
+				content:"";
+				height:0;
+				left:50%;
+				margin-left:-$arrow-size;
+				overflow:hidden;
+				position:absolute;
+				width:0;
+				background:transparent;
+				border-bottom-color:$color-text-background;
+				bottom:-2px;
+				z-index:100;
+			}
+		}
+	}
+}
+
+.subnavigation-vertical {
+	.active .active a {
+		&:after {
+			top:50%;
+			left:$spacing/2;
+			border-width:6px;
+			margin-top:-6px;
+			border-bottom-color:$color-primary;
+		}
+		&:before {
+			display:none;
+		}
+	}
+
+}
+
+/* @endgroup NAVIGATION */
