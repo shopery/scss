@@ -1,53 +1,53 @@
 // Color for text & Foreground elements
-$color-text: #333 !default;
+$color-text: #333 !global !default;
 
-$color-text-light: #b2b2b2 !default;
+$color-text-light: #b2b2b2 !global !default;
 
 // Color for text background elements
-$color-text-background: #FFF !default;
+$color-text-background: #FFF !global !default;
 
 
 // Primary color
-$color-primary: #36658E !default;
+$color-primary: #36658E !global !default;
 
-$color-primary-light: #8bb7dd !default;
+$color-primary-light: #8bb7dd !global !default;
 
 // Secondary color
-$color-secondary: #D4A340 !default;
+$color-secondary: #D4A340 !global !default;
 
-$color-secondary-light: #E6C16C !default;
+$color-secondary-light: #E6C16C !global !default;
 
 // Color for links
-$color-link: #0d65a8 !default;
+$color-link: #0d65a8 !global !default;
 
 // Color for link hover
-$color-link-hover: #0d65a8 !default;
+$color-link-hover: #0d65a8 !global !default;
 
 // Color background for link hover
-$color-link-background: #cce7fc !default;
+$color-link-background: #cce7fc !global !default;
 
 // Color for boxes
-$color-box: #EDEDEB !default;
+$color-box: #EDEDEB !global !default;
 
-$color-box-light: #fafafa !default;
+$color-box-light: #fafafa !global !default;
 
 // Color of the header
-$color-header: #FFFFFF !default;
+$color-header: #FFFFFF !global !default;
 
 // Color of the rank
-$color-rank:#FCCB04 !default;
+$color-rank:#FCCB04 !global !default;
 
 // Color for info elements
-$color-info: #1E72A6 !default;
+$color-info: #1E72A6 !global !default;
 
 // Color for Confirmation elements
-$color-ok: #6A932C !default;
+$color-ok: #6A932C !global !default;
 
 // Color for Error elements
-$color-ko : #EE3728 !default;
+$color-ko : #EE3728 !global !default;
 
 // Color for warning elements
-$color-warning: #DFB84F !default;
+$color-warning: #DFB84F !global !default;
 
 // Color for focused elements
 $color-focus: #ffffea;

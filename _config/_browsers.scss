@@ -1,8 +1,8 @@
 // Support for IE6
-$legacy-support-for-ie6 : true !default;
+$legacy-support-for-ie6 : true !global !default;
 
 // Support for IE7
-$legacy-support-for-ie7 : true !default;
+$legacy-support-for-ie7 : true !global !default;
 
 // Support for IE8
-$legacy-support-for-ie8 : true !default;
+$legacy-support-for-ie8 : true !global !default;

@@ -2,7 +2,7 @@
   $bg-color,
   $dark-text: #000,
   $light-text: $contrasted-light-default,
-  $threshold: $contrasted-lightness-threshold
+  $threshold: 50%
   ) {
 
   $color-brightness:    round((red($bg-color) * 299) + (green($bg-color) * 587) + (blue($bg-color) * 114) / 1000);
