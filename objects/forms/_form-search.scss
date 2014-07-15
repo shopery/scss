@@ -14,18 +14,20 @@
 		right:2px;
 		margin:0;
 		min-width:33px;
+		min-height: 31px;
 		padding:$spacing/7 $spacing/2;
 		@include border-radius(0 $default-border-radius $default-border-radius 0);
 	}
 }
 
 .navigation, .subnavigation {
+
 	.form-search {
 		font-family: $font-face-title;
 		@include rem-fallback(font-size, $font-size-M, true);
 		width:35%;
 		min-width:210px;
 		float:right;
-		margin:$spacing/4 $spacing/4 $spacing/4 0;
+		margin:$spacing/6 $spacing/6 0 0;
 	}
 }

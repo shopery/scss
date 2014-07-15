@@ -3,33 +3,31 @@
 	& {
 		overflow:hidden;
 		background:$color-primary;
+		border-radius: 2px;
 	}
 	a {
 		& {
-			text-transform:uppercase;
 			color:$color-text-background;
-			margin:0;
 			@include box-shadow(0 0 2px rgba($color-primary-dark, .2), 0 0 2px rgba($color-primary-dark, .2));
+			text-rendering: optimizeLegibility;
+			border-radius: 2px;
 		}
 	}
 	li {
 		&.active {
 			margin:0;
 		}
-		&.active a {
-			@include opacity-background(contrast-color($color-primary-dark), .15);
+		&.active a, &.active a:hover {
+			@include opacity-background(#FFF, .2);
+			color: contrast-color($color-primary);
+			@include text-shadow( 0 0 5px rgba(0,0,0,0.2) );
+			border-top-color:rgba(255,255,255,.1);
+			border-bottom-color: rgba(0,0,0,.1);
 		}
 		a:hover {
-			background-color:$color-primary-light;
-			@include opacity-background(contrast-color($color-primary-dark), .3);
-		}
-	}
-}
+			@include opacity-background(#000, .2);
 
-.navigation-vertical {
-	a:hover {
-		margin-left:1px;
-		margin-right:1px;
+		}
 	}
 }
 
