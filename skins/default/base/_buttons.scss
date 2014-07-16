@@ -87,14 +87,10 @@
  & {
    font-weight:bold;
    font-family: $font-face-title;
-   @include rem-fallback(font-size, $font-size-default);
  }
   &.small {
 	font-family: $font-face-default;
 	font-weight:normal;
-  }
-  &.large {
-	@include rem-fallback(font-size, $font-size-M);
   }
 }
 /* @endgroup DISABLED */

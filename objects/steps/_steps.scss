@@ -20,7 +20,7 @@ $steps-color:contrast-color($color-primary, lighten($color-primary, 30%), darken
 	text-transform:uppercase;
 	color:$color-text;
 	font-family:$font-face-title;
-	@include rem-fallback(font-size, $font-size-M);
+	@include rem-fallback(font-size, $font-size-l);
 }
 
 .steps li:first-child {

@@ -27,7 +27,7 @@
 
 	ul.as-selections li.as-selection-item {
 		color: $color-text;
-		font-size: $font-size-S;
+		font-size: $font-size-s;
 		text-shadow: 0 1px 1px $color-text-background;
 		background: $color-box;
 		border: 1px solid $color-box;
@@ -88,7 +88,7 @@
 	ul.as-selections li.as-original input {
 		border: none;
 		outline: none;
-		font-size: $font-size-S;
+		font-size: $font-size-s;
 		width: auto;
 		padding-top: $spacing/4;
 		@include box-shadow(none);
@@ -98,7 +98,7 @@
 		list-style-type: none;
 		margin: 2px 0 0 0;
 		padding: 0;
-		font-size: $font-size-S;
+		font-size: $font-size-s;
 		color: $color-text;
 		@include background(linear-gradient(top, lighten($color-box, 10%) 50%, lighten($color-box, 15%) 100%));
 		@include gradient-ie(lighten($color-box, 5%), darken($color-box, 10%));

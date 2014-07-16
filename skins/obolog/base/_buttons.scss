@@ -39,8 +39,8 @@
 	& {
 		font-weight: bold;
 		font-family: $font-face-title;
-		padding: $font-size-M/3 $font-size-M;
-		@include rem-fallback(font-size, $font-size-M);
+		padding: $font-size-m/3 $font-size-m;
+		@include rem-fallback(font-size, $font-size-m);
 		@include box-shadow(0px 1px 0px rgba($color-text, .5));
 	}
 	&:hover {
@@ -51,12 +51,12 @@
 	}
 	&.small {
 		font-family: $font-face-default;
-		padding: $font-size-S/2 $font-size-S;
+		padding: $font-size-s/2 $font-size-s;
 		font-weight: normal;
 	}
 	&.large {
-		padding: $font-size-L/2 $font-size-L;
-		@include rem-fallback(font-size, $font-size-L);
+		padding: $font-size-l/2 $font-size-l;
+		@include rem-fallback(font-size, $font-size-l);
 	}
 }
 

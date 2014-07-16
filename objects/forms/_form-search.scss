@@ -24,7 +24,7 @@
 
 	.form-search {
 		font-family: $font-face-title;
-		@include rem-fallback(font-size, $font-size-M, true);
+		@include rem-fallback(font-size, $font-size-m, true);
 		width:35%;
 		min-width:210px;
 		float:right;

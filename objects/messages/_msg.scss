@@ -23,7 +23,7 @@
 		font-style: normal;
 		font-weight: normal;
 		text-align: center;
-		@include rem-fallback(font-size, $font-size-XL);
+		@include rem-fallback(font-size, $font-size-xl);
 		text-decoration: inherit;
 		vertical-align: baseline;
 		@include border-radius(200px);

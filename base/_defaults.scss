@@ -155,6 +155,6 @@ nav li, .nav li {
 }
 
 small {
-	@include rem-fallback(font-size, $font-size-XXS, true);
-	line-height: $font-line-height;
+	@include rem-fallback(font-size, $font-size-xxs, true);
+	line-height: $base-line-height;
 }

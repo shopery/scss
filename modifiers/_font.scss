@@ -1,71 +1,71 @@
 %title {
 	font-family:$font-face-title;
 	font-weight:bold;
-	line-height: $title-line-height;
+	line-height: map-get($line-height, title);
 	margin-bottom: $spacing/4;
 }
 
 h1, .fz-h1 {
-	@include rem-fallback(font-size, $font-size-XXL*1.2, true);
+	@include rem-fallback(font-size, $font-size-xxl*1.2, true);
 	@extend %title;
 }
 
 h2, .fz-h2 {
-	@include rem-fallback(font-size, $font-size-XL*1.2, true);
+	@include rem-fallback(font-size, $font-size-xl*1.2, true);
 	@extend %title;
 }
 
 h3, .fz-h3 {
-	@include rem-fallback(font-size, $font-size-L*1.2, true);
+	@include rem-fallback(font-size, $font-size-l*1.2, true);
 	@extend %title;
 }
 
 h4, .fz-h4 {
-	@include rem-fallback(font-size, $font-size-ML*1.2, true);
+	@include rem-fallback(font-size, $font-size-ml*1.2, true);
 	@extend %title;
 }
 
 h5, .fz-h5 {
-	@include rem-fallback(font-size, $font-size-M*1.2, true);
+	@include rem-fallback(font-size, $font-size-m*1.2, true);
 	@extend %title;
 }
 
 .fz-xxxl {
-	@include rem-fallback(font-size, $font-size-XXXL, true);
-	line-height: $font-line-height;
+	@include rem-fallback(font-size, $font-size-xxxl, true);
+	line-height: $base-line-height;
 }
 
 .fz-xxl {
-	@include rem-fallback(font-size, $font-size-XXL, true);
-	line-height: $font-line-height;
+	@include rem-fallback(font-size, $font-size-xxl, true);
+	line-height: $base-line-height;
 }
 
 .fz-xl {
-	@include rem-fallback(font-size, $font-size-XL, true);
-	line-height: $font-line-height;
+	@include rem-fallback(font-size, $font-size-xl, true);
+	line-height: $base-line-height;
 }
 
 .fz-l {
-	@include rem-fallback(font-size, $font-size-L, true);
-	line-height: $font-line-height;
+	@include rem-fallback(font-size, $font-size-l, true);
+	line-height: $base-line-height;
 }
 
 .fz-m {
-	@include rem-fallback(font-size, $font-size-M, true);
-	line-height: $font-line-height;
+	@include rem-fallback(font-size, $font-size-m, true);
+	line-height: $base-line-height;
 }
 
 .fz-default {
 	@include rem-fallback(font-size, $font-size-default, true);
-	line-height: $font-line-height;
+	line-height: $base-line-height;
 }
 
 .fz-s {
-	@include rem-fallback(font-size, $font-size-XS, true);
-	line-height: $font-line-height;
+	@include rem-fallback(font-size, $font-size-xs, true);
+	line-height: $base-line-height;
 }
 
 .fz-xs {
-	@include rem-fallback(font-size, $font-size-XXS, true);
-	line-height: $font-line-height;
+	@include rem-fallback(font-size, $font-size-xxs, true);
+	line-height: $base-line-height;
 }

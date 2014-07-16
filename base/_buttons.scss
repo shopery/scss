@@ -33,13 +33,13 @@ input[type='submit'] {
 /* @group SIZE */
 [class*='button'].large {
 	padding: $spacing/2 $spacing;
-	@include rem-fallback(font-size, $font-size-M);
+	@include rem-fallback(font-size, $font-size-l);
 	line-height: 20px;
 }
 
 [class*='button'].small {
 	padding: $spacing/6 $spacing/4;
-	@include rem-fallback(font-size, $font-size-XS);
+	@include rem-fallback(font-size, $font-size-xs);
 }
 
 /* @endgroup SIZE */

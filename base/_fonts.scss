@@ -15,10 +15,8 @@ html {
 
 /* @group FONT-SIZES */
 
-body {
-  	@include rem-fallback(font-size, $font-size-default);
-  	line-height: $font-line-height;
-}
+
+@include establish-baseline;
 
 /* @endgroup FONT-SIZES */
 

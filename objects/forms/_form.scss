@@ -2,7 +2,7 @@
 	label {
 		& {
 			text-align: left;
-			@include rem-fallback(font-size, $font-size-S);
+			@include rem-fallback(font-size, $font-size-s);
 			@include opacity(.8);
 		}
 		&.checkbox {
