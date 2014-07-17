@@ -1,0 +1,123 @@
+@if $object-navigation == default {
+
+	$arrow-size:$spacing/2;
+
+	.navigation-sub {
+		& {
+			background:$color-box;
+			@include border-radius(0 0 $default-border-radius $default-border-radius);
+			margin: 0 $spacing/6;
+		}
+		a {
+			& {
+				color:$color-text;
+				text-rendering: optimizeLegibility;
+				margin: 0;
+			}
+			&:hover {
+				@include opacity-background(#000, .05);
+			}
+		}
+		.active {
+			a {
+				& {
+					border-bottom: 2px solid $color-primary;
+				}
+				&:before {
+					border:$spacing/3 solid transparent;
+					border-style:outset outset solid outset;
+					content:"";
+					height:0;
+					left:50%;
+					margin-left:-$spacing/3;
+					overflow:hidden;
+					position:absolute;
+					width:0;
+					background:transparent;
+					border-bottom-color:$color-primary;
+					bottom:-2px;
+					z-index:100;
+				}
+			}
+		}
+	}
+
+	.navigation-sub.vertical {
+		a {
+			margin-right: 0 !important;
+		}
+		.active {
+			a {
+				& {
+					border-bottom: 0px none;
+					background: $color-text-background;
+					border-left: 2px solid $color-primary;
+				}
+				&:before {
+					left:0;
+					margin-bottom:-$spacing/3;
+					margin-left:0;
+					bottom:50%;
+					@include transform( rotate(90deg));
+				}
+			}
+			.active a {
+				&:after {
+					top:50%;
+					left:$spacing/2;
+					border-width:6px;
+					margin-top:-6px;
+					border-bottom-color:$color-primary;
+				}
+				&:before {
+					display:none;
+				}
+			}
+		}
+	}
+}
+
+
+/*
+.subnavigation, .subnavigation-vertical {
+	& {
+		position:relative;
+		overflow:hidden;
+		width:100%;
+	}
+	> ul {
+		ul {
+			& {
+				border-top:1px dotted $color-box;
+				border-bottom:1px dotted $color-box;
+				padding:0;
+				margin:0 $spacing;
+			}
+			a {
+				padding:$spacing/4 $spacing;
+			}
+		}
+	}
+	li {
+		& {
+			float:left;
+		}
+		a {
+			& {
+				display:block;
+				padding:$spacing/2 $spacing;
+				text-decoration:none;
+			}
+		}
+	}
+
+}
+
+.subnavigation-vertical {
+	@extend %vertical-nav;
+	li {
+		display:block;
+	}
+}
+
+*/

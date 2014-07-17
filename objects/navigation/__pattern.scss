@@ -1,6 +1,43 @@
-%vertical-nav {
+%navigation {
+	& {
+		position:relative;
+		width:auto;
+	}
+	&.small {
+		a {
+			padding:$spacing/4 $spacing/2;
+		}
+	}
+	li {
+		& {
+			float:left;
+		}
+		&.active {
+			a {
+				position: relative;
+			}
+		}
+	}
+	& > ul {
+		& {
+			overflow: hidden;
+		}
+		ul {
+			display: none;
+		}
+	}
+	a {
+		display:block;
+		padding:$spacing/3 $spacing;
+		text-decoration:none;
+		margin: $spacing/6 0 $spacing/6 $spacing/6;
+	}
+
+}
+
+%navigation-vertical {
 	li {
 		float:none !important;
-		display:block;
+		display:block !important;
 	}
 }

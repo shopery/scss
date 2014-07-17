@@ -1,29 +1,17 @@
+// colors config
+@import '_colors.scss';
 
-// ------------------------------
-// CONFIG INDEX FILE
-//
-// instance: softonic
-// parent instance: none
-// ------------------------------
+// fonts config
+@import '_fonts.scss';
 
-// CONFIG VARS
+// measures config
+@import '_measures.scss';
 
-// CONFIG IMPORT
-//
-	// colors config
-	@import 'colors';
+// browsers config
+@import '_browsers.scss';
 
-	// colors config
-	@import 'colors-computed';
+// ui config
+@import '_ui.scss';
 
-
-	// fonts config
-	@import 'fonts';
-
-	// measures config
-	@import 'measures';
-
-	// browsers config
-	@import 'browsers';
-
-	@import 'ui';
+// objects
+@import '_objects.scss';

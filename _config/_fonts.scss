@@ -1,56 +1,29 @@
-$icons-font: true !global !default;
-
-$line-height: (
-	base: 1.5em,
-	title: 1.2em
-) !global !default;
-
-$font-face: (
-	default: "Tahoma, Arial, Verdana, sans-serif",
-	title: "'Arial Narrow', Tahoma, sans-serif"
-) !global !default;
-
-$font-size: (
-	base: 14px,
-	xxxl: 2.2rem,
-	xxl: 1.7rem,
-	xl: 1.4rem,
-	l: 1.2rem,
-	ml: 1.1rem,
-	m: 1rem,
-	default: .9rem,
-	s: .8rem,
-	xs: .75rem,
-	xxs: .7rem,
-	xxxs: .6rem,
-	xxxxs: .5rem
-) !global !default;
-
 
 // font faces variables
 
-$font-face-default: map-get($font-face, default) !global !default;
-$font-face-title: map-get($font-face, title) !global !default;
-$px-to-em-proportion: strip-unit(map-get($font-size, base)) !global !default;
+$font-face-default: unquote(map-get($font-faces, default)) !global;
+$font-face-title: unquote(map-get($font-faces, title)) !global;
+$px-to-em-proportion: strip-unit(map-get($font-sizes, base)) !global;
+$icons-font: map-get($font-faces, icons) !global !global;
 
 // Defaults for compass
 
-$base-font-size: map-get($font-size, base) !global; // Sets the base font size
+$base-font-size: map-get($font-sizes, base) !global; // Sets the base font size
 $base-line-height: map-get($line-height, base) !global; // Sets the base line height
 $round-to-nearest-half-line: true !global; // Allows compass to round to  multiples of 0.5x line height
 $rhythm-unit: "rem" !global; // Sets rhythm unit to rem. Remove to use default em unit.
 
 // Variables for font sizes
 
-$font-size-xxxl: map-get($font-size, xxxl) !global;
-$font-size-xxl: map-get($font-size, xxl) !global;
-$font-size-xl: map-get($font-size, xl) !global;
-$font-size-l: map-get($font-size, l) !global;
-$font-size-ml: map-get($font-size, ml) !global;
-$font-size-m: map-get($font-size, m) !global;
-$font-size-default: map-get($font-size, default) !global;
-$font-size-s: map-get($font-size, s) !global;
-$font-size-xs: map-get($font-size, xs) !global;
-$font-size-xxs: map-get($font-size, xxs) !global;
-$font-size-xxxs: map-get($font-size, xxxs) !global;
-$font-size-xxxxs: map-get($font-size, xxxxs)!global;
+$font-size-xxxl: map-get($font-sizes, xxxl) !global;
+$font-size-xxl: map-get($font-sizes, xxl) !global;
+$font-size-xl: map-get($font-sizes, xl) !global;
+$font-size-l: map-get($font-sizes, l) !global;
+$font-size-ml: map-get($font-sizes, ml) !global;
+$font-size-m: map-get($font-sizes, m) !global;
+$font-size-default: map-get($font-sizes, default) !global;
+$font-size-s: map-get($font-sizes, s) !global;
+$font-size-xs: map-get($font-sizes, xs) !global;
+$font-size-xxs: map-get($font-sizes, xxs) !global;
+$font-size-xxxs: map-get($font-sizes, xxxs) !global;
+$font-size-xxxxs: map-get($font-sizes, xxxxs)!global;

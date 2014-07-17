@@ -1,13 +1,17 @@
 html {
 	height: 100%;
 	overflow: auto;
+	background-color: $color-body;
 }
+
 a {
-	color: $color-link;
-	text-decoration: none;
-}
-a:hover {
-	text-decoration:underline;
+	& {
+		color: $color-link;
+		text-decoration: none
+	}
+	&:hover {
+		text-decoration:underline;
+	}
 }
 
 /* @group SCROLLBAR */
