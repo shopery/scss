@@ -1,12 +1,10 @@
 @if $object-navigation == default {
 
-	$arrow-size:$spacing/2;
-
 	.navigation-sub {
 		& {
-			background:$color-box;
-			@include border-radius(0 0 $default-border-radius $default-border-radius);
-			margin: 0 $spacing/6;
+			@include gradient-ie($color-text-background,$color-box);
+			@include background-image(linear-gradient($color-text-background 75%,$color-box ));
+			@include border-radius(0);
 		}
 		a {
 			& {
@@ -18,106 +16,263 @@
 				@include opacity-background(#000, .05);
 			}
 		}
-		.active {
-			a {
-				& {
-					border-bottom: 2px solid $color-primary;
-				}
-				&:before {
-					border:$spacing/3 solid transparent;
-					border-style:outset outset solid outset;
-					content:"";
-					height:0;
-					left:50%;
-					margin-left:-$spacing/3;
-					overflow:hidden;
-					position:absolute;
-					width:0;
-					background:transparent;
-					border-bottom-color:$color-primary;
-					bottom:-2px;
-					z-index:100;
+		& > ul {
+			.active {
+				a {
+					& {
+						border-bottom: 2px solid $color-primary;
+					}
+					&:before {
+						border:$spacing/3 solid transparent;
+						border-style:outset outset solid outset;
+						content:"";
+						height:0;
+						left:50%;
+						margin-left:-$spacing/3;
+						overflow:hidden;
+						position:absolute;
+						width:0;
+						background:transparent;
+						border-bottom-color:$color-primary;
+						bottom:-2px;
+						z-index:100;
+					}
 				}
 			}
 		}
 	}
 
 	.navigation-sub.vertical {
+		& {
+			background: none;
+		}
 		a {
 			margin-right: 0 !important;
 		}
-		.active {
-			a {
-				& {
-					border-bottom: 0px none;
-					background: $color-text-background;
-					border-left: 2px solid $color-primary;
+		> ul {
+			.active {
+				a {
+					& {
+						border-bottom: 0px none;
+						background: $color-primary;
+						color: contrast-color($color-primary);
+						border-left: 2px solid $color-primary;
+						@include border-radius;
+					}
+					&:before {
+						left:0;
+						margin-bottom:-$spacing/3;
+						margin-left:0;
+						bottom:50%;
+						@include transform( rotate(90deg));
+					}
 				}
-				&:before {
-					left:0;
-					margin-bottom:-$spacing/3;
-					margin-left:0;
-					bottom:50%;
-					@include transform( rotate(90deg));
+				ul {
+					margin: 0;
+					@include gradient-ie($color-text-background,$color-box);
+					@include background-image(linear-gradient($color-text-background 75%,$color-box ));
 				}
-			}
-			.active a {
-				&:after {
-					top:50%;
-					left:$spacing/2;
-					border-width:6px;
-					margin-top:-6px;
-					border-bottom-color:$color-primary;
+				li {
+					a {
+						& {
+							border-bottom: 0px none;
+							background: transparent;
+							border-left: 0px none;
+							padding-left: $spacing*1.8;
+							color: $color-text;
+						}
+						&:hover {
+							@include opacity-background(#000, .05);
+						}
+						&:before {
+							display:none;
+						}
+					}
+					&.active {
+						a {
+							& {
+								font-weight: bold;
+							}
+							&:before {
+								display: block;
+								left: $spacing;
+
+							}
+						}
+					}
 				}
-				&:before {
-					display:none;
-				}
+
 			}
 		}
+
 	}
 }
 
+@if $object-navigation == tabbed {
+	.navigation-sub {
 
-/*
-.subnavigation, .subnavigation-vertical {
-	& {
-		position:relative;
-		overflow:hidden;
-		width:100%;
-	}
-	> ul {
-		ul {
-			& {
-				border-top:1px dotted $color-box;
-				border-bottom:1px dotted $color-box;
-				padding:0;
-				margin:0 $spacing;
-			}
-			a {
-				padding:$spacing/4 $spacing;
-			}
-		}
-	}
-	li {
+		$arrow-size: 8px;
+
 		& {
-			float:left;
+			background: none;
+			filter: none;
 		}
 		a {
 			& {
-				display:block;
-				padding:$spacing/2 $spacing;
-				text-decoration:none;
+				font-family: $font-face-title;
+				margin: 0;
+				@include rem-fallback(font-size, $font-size-m);
+			}
+			&:hover {
+				text-decoration: underline;
+			}
+			[class^='icon-'] {
+				@include opacity(.5);
+			}
+		}
+		.active {
+			& {
+				position: relative;
+			}
+			a {
+				& {
+					color: $color-text;
+					font-weight: bold;
+				}
+				&:hover {
+					text-decoration: none;
+				}
+				&:after {
+					border: $arrow-size solid transparent;
+					border-style: outset outset solid outset;
+					content: "";
+					height: 0;
+					left: 50%;
+					margin-left: -$arrow-size;
+					overflow: hidden;
+					position: absolute;
+					width: 0;
+					background: transparent;
+					border-bottom-color: $color-text-background;
+					bottom: -2px;
+					z-index: 100;
+				}
+			}
+			ul {
+				& {
+					margin-left: $spacing;
+				}
+			}
+			.active {
+				a {
+					font-weight: bold;
+				}
 			}
 		}
 	}
 
-}
-
-.subnavigation-vertical {
-	@extend %vertical-nav;
-	li {
-		display:block;
+	.navigation-sub.vertical {
+		li {
+			& {
+				margin-bottom: $spacing/4;
+			}
+			a {
+				& {
+					font-family: $font-face-title;
+					@include rem-fallback(font-size, $font-size-m, true);
+					@include background-image(linear-gradient($color-primary-light, $color-primary));
+					@include gradient-ie($color-primary-light, $color-primary);
+					@include box-shadow(inset 0 1px 2px rgba($color-text-background, .5));
+					border-top: 1px solid $color-primary;
+					border-bottom: 1px solid $color-primary;
+					color: $color-text-background;
+					padding: $spacing/4 $spacing/2;
+					@include border-radius;
+				}
+				&:hover {
+					text-decoration: none;
+					@include background-image(linear-gradient($color-primary-light, lighten($color-primary-light, 5%)));
+					@include gradient-ie($color-primary-light, lighten($color-primary-light, 5%));
+				}
+				&:after {
+					display: none;
+				}
+				[class^='icon-'] {
+					@include opacity(.5);
+					margin-right: $spacing/4;
+					min-width: 1em;
+					text-align: center;
+				}
+			}
+		}
+		.active {
+			& {
+				position: relative;
+			}
+			a {
+				&, &:hover {
+					@include background-image(linear-gradient($color-secondary-light, $color-secondary));
+					@include gradient-ie($color-secondary-light, $color-secondary);
+					border-color: $color-secondary;
+					text-decoration: none;
+				}
+			}
+			ul {
+				& {
+					margin: 0 $spacing/2 $spacing/2;
+					@include opacity-background($color-text, .05);
+					@include border-radius(0 0 $default-border-radius $default-border-radius);
+					border: 1px solid darken($color-box, 5%);
+				}
+				li {
+					& {
+						padding: $spacing/4 $spacing/2;
+						margin-bottom: 0;
+						border-bottom: 1px solid lighten($color-box, 5%);
+						border-top: 1px solid darken($color-box, 5%);
+					}
+					a {
+						&, &:hover {
+							background: none;
+							filter: none;
+							color: $color-link;
+							border: 0px none;
+							padding: 0;
+							@include box-shadow(none);
+							@include rem-fallback(font-size, $font-size-default, true);
+						}
+						& {
+							font-weight: normal;
+						}
+						&:hover {
+							text-decoration: underline;
+						}
+						&:before {
+							font-family: 'FontAwesome';
+							content: "\f111";
+							@include rem-fallback(font-size, .4em);
+							@include opacity(.5);
+							min-width: 16px;
+							display: inline-block;
+							vertical-align: middle;
+						}
+					}
+				}
+			}
+			.active {
+				a {
+					& {
+						font-weight: bold;
+						color: $color-text;
+					}
+					&:before {
+						content: "\f0da ";
+						@include rem-fallback(font-size, $font-size-default);
+						color: $color-ok;
+						@include opacity(1);
+					}
+				}
+			}
+		}
 	}
 }
-
-*/

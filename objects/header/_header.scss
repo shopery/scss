@@ -33,27 +33,13 @@
 	}
 }
 
-/* @group HEADER */
-
-		/* @group LOGOUT */
-			.main-header .logout {
-				float: right;
-				@include background( linear-gradient( bottom, rgb( 106,106,106 ) 0, rgb( 143,143,143 ) 100% ) );
-			}
-			.main-header .logout a {
-				position: relative;
-				display: block;
-				padding: 5px 10px;
-				color: #000;
-			}
-			.main-header .logout a:hover {
-				background: inherit;
-				color: #EEE;
-				@include text-shadow( 0 0 5px #000 );
-			}
-			.main-header .logout a span {
-				font-size: 2em;
-				line-height: 125%;
-			}
-		/* @endgroup LOGOUT */
-/* @endgroup HEADER */
+.header {
+	.menu {
+		& {
+			background: $color-primary;
+		}
+		.navigation {
+			min-height: 44px;
+		}
+	}
+}
