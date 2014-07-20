@@ -1,16 +1,18 @@
-.msg-warning {
-	& {
-		border-color:$color-warning;
-		@include opacity-background($color-warning, .1);
-	}
-	i {
-		color: adjust-lightness($color-warning, -35%);
-	}
-	i {
-		color: $color-warning;
-	}
-	&:before {
-		content: '\f071';
-		color: $color-warning;
+@if $object-messages != false {
+	.msg-warning {
+		& {
+			border-color:$color-warning;
+			@include opacity-background($color-warning, .1);
+		}
+		i {
+			color: adjust-lightness($color-warning, -35%);
+		}
+		i {
+			color: $color-warning;
+		}
+		&:before {
+			content: '\f071';
+			color: $color-warning;
+		}
 	}
 }

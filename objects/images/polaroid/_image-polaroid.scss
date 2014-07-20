@@ -1,14 +1,18 @@
-img.polaroid {
-	@extend %images-polaroid;
-}
+@if $object-image-polaroid != false {
 
-a.polaroid {
-	& {
-		text-decoration:none;
-		display:inline-block;
+	img.polaroid {
 		@extend %images-polaroid;
 	}
-	&.left, &.right {
-		margin-bottom:$spacing;
+
+	a.polaroid {
+		& {
+			text-decoration:none;
+			display:inline-block;
+			@extend %images-polaroid;
+		}
+		&.left, &.right {
+			margin-bottom:$spacing;
+		}
 	}
+
 }

@@ -1,26 +1,28 @@
-.pagination {
-	& {
-		overflow: hidden;
-		margin-bottom: $spacing/2;
-		clear: both;
-		width: auto;
-		text-align: center;
-	}
-	&.right {
-		float: right;
-	}
-	li {
-		display: inline-block;
-		padding: 0 1px;
-	}
-	a {
+@if $object-pagination != false {
+	.pagination {
 		& {
-			display: block;
-			padding: $spacing/4 $spacing/4;
-			line-height: 100%;
-			margin-bottom: $spacing/4;
-			text-decoration: none;
-			font-weight: bold;
+			overflow: hidden;
+			margin-bottom: $spacing/2;
+			clear: both;
+			width: auto;
+			text-align: center;
+		}
+		&.right {
+			float: right;
+		}
+		li {
+			display: inline-block;
+			padding: 0 1px;
+		}
+		a {
+			& {
+				display: block;
+				padding: $spacing/4 $spacing/4;
+				line-height: 100%;
+				margin-bottom: $spacing/4;
+				text-decoration: none;
+				font-weight: bold;
+			}
 		}
 	}
 }

@@ -1,7 +1,9 @@
-/* @group FOOTER */
+@if $object-footer != false {
+
 	.footer {
-		margin:$spacing*4 -2px 0;
-	  width:102%;
+		@extend  %header-footer;
+		margin: $spacing*4 -2px 0;
+		width: 102%;
 	}
 
-/* @endgroup FOOTER */
+}

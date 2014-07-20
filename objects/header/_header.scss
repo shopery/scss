@@ -1,45 +1,21 @@
-%header-footer {
-	& {
-		width: 100%;
-		margin-bottom: $spacing;
-		background: $color-header;
-	  	color: $color-text-background;
-		min-height: $spacing*4;
-		position: relative;
-		padding-top: $spacing/2;
-	}
-  	& > a {
-	  color: $color-text-background;
-	}
-	.logo {
-		max-width:75%;
-	}
-}
+@if $object-header != false {
 
-
-.header {
-	& {
-		@extend %header-footer;
-	}
-	.navigation {
-		border: 0px none;
-		@include box-shadow(none);
-	}
-}
-
-.footer {
-	& {
-		@extend  %header-footer;
-	}
-}
-
-.header {
-	.menu {
+	.header {
 		& {
-			background: $color-primary;
+			@extend %header-footer;
 		}
 		.navigation {
-			min-height: 44px;
+			border: 0px none;
+			@include box-shadow(none);
+		}
+		.menu {
+			& {
+				background: $color-primary;
+			}
+			.navigation {
+				min-height: 44px;
+			}
 		}
 	}
+
 }

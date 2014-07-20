@@ -1,16 +1,19 @@
-img.circle, img.circle-s {
-	@extend %images-circle;
-}
+@if $object-image-circle != false {
 
-a.circle, a.circle-s {
-	& {
-		text-decoration:none;
-	}
-	img {
+	img.circle, img.circle-s {
 		@extend %images-circle;
 	}
-}
 
-img.circle-s, a.circle-s img {
-	border-width: $spacing/4;
+	a.circle, a.circle-s {
+		& {
+			text-decoration:none;
+		}
+		img {
+			@extend %images-circle;
+		}
+	}
+
+	img.circle-s, a.circle-s img {
+		border-width: $spacing/4;
+	}
 }

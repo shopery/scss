@@ -1,20 +1,22 @@
-.list-horizontal {
-	& {
-		padding-left: 0 !important;
-	}
-	li {
+@if $object-lists != false {
+	.list-horizontal {
 		& {
-			display: inline-block;
-			margin-right: $spacing/4;
+			padding-left: 0 !important;
 		}
-	}
-	dt, dd {
-		float: left;
-	}
-	dt {
-		clear: left;
-	}
-	dd {
-		margin-left: $spacing/2;
+		li {
+			& {
+				display: inline-block;
+				margin-right: $spacing/4;
+			}
+		}
+		dt, dd {
+			float: left;
+		}
+		dt {
+			clear: left;
+		}
+		dd {
+			margin-left: $spacing/2;
+		}
 	}
 }

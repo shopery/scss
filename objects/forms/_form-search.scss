@@ -1,39 +1,47 @@
-.form-search {
-	& {
-		position:relative;
-	}
-	input {
-		margin-right:150px;
-		@include border-radius;
-		padding:0 $spacing*4 0 $spacing/2;
-		height:$spacing*1.4;
-		@include rem-fallback(font-size, $font-size-ml);
-	}
-	button {
-		position:absolute;
-		top:2px;
-		right:2px;
-		margin:0;
-		min-width:33px;
-		min-height: 31px;
-		padding:$spacing/7 $spacing/2;
-		@include border-radius(0 $default-border-radius $default-border-radius 0);
-	}
-}
+@if ($object-form != false) and ($object-form-search != false) {
 
-.navigation, .navigation-sub {
 	.form-search {
-		font-family: $font-face-title;
-		@include rem-fallback(font-size, $font-size-m, true);
-		width:35%;
-		min-width:210px;
-		float:right;
-		margin:$spacing/6 $spacing/6 0 0;
+		& {
+			position:relative;
+		}
+		input {
+			margin-right:150px;
+			@include border-radius;
+			padding:0 $spacing*4 0 $spacing/2;
+			height:$spacing*1.4;
+			@include rem-fallback(font-size, $font-size-ml);
+		}
+		button {
+			position:absolute;
+			top:2px;
+			right:2px;
+			margin:0;
+			min-width:33px;
+			min-height: 31px;
+			padding:$spacing/7 $spacing/2;
+			@include border-radius(0 $default-border-radius $default-border-radius 0);
+		}
 	}
-}
 
-.navigation-sub {
-	.form-search {
-		margin:0 2px 0 0;
+	@if $object-navigation != false {
+		.navigation, .navigation-sub {
+			.form-search {
+				font-family: $font-face-title;
+				@include rem-fallback(font-size, $font-size-m, true);
+				width:35%;
+				min-width:210px;
+				float:right;
+				margin:$spacing/6 $spacing/6 0 0;
+			}
+		}
+	}
+
+	@if $object-navigation-sub != false {
+
+		.navigation-sub {
+			.form-search {
+				margin:0 2px 0 0;
+			}
+		}
 	}
 }
