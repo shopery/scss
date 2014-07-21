@@ -58,25 +58,32 @@
 		input-focus: #ffffea
 	) !global !default;
 
-		$objects: (
-			boxes: default,
-			filters: default,
-			footer: default,
-			form: default,
-			form-search: default,
-			header: default,  //personalized
-			image-circle: default,
-			image-polaroid: default,
-			lists: default,
-			messages: default,
-			navigation: tabbed,  //personalized
-			navigation-sub: default,  //personalized
-			pagination: default,  //personalized
-			ratings: default,
-			slides: default,
-			steps: default,
-			tabs: default,
-			tags: default//personalized
-		) !global !default;
+	$objects: (
+		style: gradient,
+		boxes: default,
+		buttons: default,
+		filters: default,
+		footer: default,
+		form: default,
+		form-search: default,
+		header: default,  //personalized
+		image-circle: default,
+		image-polaroid: default,
+		lists: default,
+		messages: default,
+		navigation: tabbed,  //personalized
+		navigation-sub: default,  //personalized
+		pagination: default,  //personalized
+		ratings: default,
+		slides: default,
+		steps: default,
+		tabs: default,
+		tags: default//personalized
+	) !global !default;
+
+	.delete {
+		color: #EE3728;
+		text-decoration: none !important;
+	}
 
 }

@@ -1,11 +1,11 @@
-$line-height: (
+$font-line-height: (
 	base: 1.5em,
 	title: 1.2em
 ) !global !default;
 
 $font-faces: (
 	default: 'Tahoma, Arial, Verdana, sans-serif',
-	title: "'Arial Narrow', Tahoma, sans-serif",
+	title: "'Open Sans Condensed','Arial Narrow', Tahoma, sans-serif",
 	icons: true
 ) !global !default;
 
@@ -56,7 +56,9 @@ $colors: (
 ) !global !default;
 
 $objects: (
+	style: flat,
 	boxes: default,
+	buttons: default,
 	filters: default,
 	footer: default,
 	form: default,

@@ -180,19 +180,29 @@
 				& {
 					font-family: $font-face-title;
 					@include rem-fallback(font-size, $font-size-m, true);
-					@include background-image(linear-gradient($color-primary-light, $color-primary));
-					@include gradient-ie($color-primary-light, $color-primary);
-					@include box-shadow(inset 0 1px 2px rgba($color-text-background, .5));
-					border-top: 1px solid $color-primary;
-					border-bottom: 1px solid $color-primary;
+					@if $object-style == gradient {
+						@include background-image(linear-gradient($color-primary-light, $color-primary));
+						@include gradient-ie($color-primary-light, $color-primary);
+						@include box-shadow(inset 0 1px 2px rgba($color-text-background, .5));
+						border-top: 1px solid $color-primary;
+						border-bottom: 1px solid $color-primary;
+					}
+					@else {
+						background: $color-primary;
+					}
+
 					color: $color-text-background;
 					padding: $spacing/4 $spacing/2;
 					@include border-radius;
 				}
 				&:hover {
 					text-decoration: none;
-					@include background-image(linear-gradient($color-primary-light, lighten($color-primary-light, 5%)));
-					@include gradient-ie($color-primary-light, lighten($color-primary-light, 5%));
+					@if $object-style == gradient {
+						@include background-image(linear-gradient($color-primary-light, lighten($color-primary-light, 5%)));
+						@include gradient-ie($color-primary-light, lighten($color-primary-light, 5%));
+					} @else {
+						background: $color-primary-light;
+					}
 				}
 				&:after {
 					display: none;
@@ -211,9 +221,13 @@
 			}
 			a {
 				&, &:hover {
-					@include background-image(linear-gradient($color-secondary-light, $color-secondary));
-					@include gradient-ie($color-secondary-light, $color-secondary);
-					border-color: $color-secondary;
+					@if $object-style == gradient {
+						@include background-image(linear-gradient($color-secondary-light, $color-secondary));
+						@include gradient-ie($color-secondary-light, $color-secondary);
+						border-color: $color-secondary;
+					} @else {
+						background: $color-secondary;
+					}
 					text-decoration: none;
 				}
 			}

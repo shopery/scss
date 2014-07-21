@@ -1,0 +1,15 @@
+%button {
+	& {
+		@include border-radius;
+		margin: 0 $spacing/4 $spacing/4 0;
+		padding: $spacing/3 $spacing;
+		border: 0px none;
+		@include box-shadow(none);
+	}
+	&.small {
+		padding: $spacing/4 $spacing/2;
+	}
+	&:hover {
+		text-decoration: none;
+	}
+}

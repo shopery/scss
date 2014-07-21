@@ -1,7 +1,7 @@
 %title {
 	font-family:$font-face-title;
 	font-weight:bold;
-	line-height: map-get($line-height, title);
+	line-height: map-get($font-line-height, title);
 	margin-bottom: $spacing/4;
 }
 
