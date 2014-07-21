@@ -1,36 +1,34 @@
 // Default spacing for margin and paddings
-$spacing: 1.6em !global !default;
+$spacing: map-get($defaults, spacing) !global;
 
 // Default border-radius
-$default-border-radius: 2px !global !default;
+$default-border-radius: map-get($defaults, border-radius) !global;
 
 // Default border radius for inputs
-$default-border-radius-input: 3px !global !default;
+$default-border-radius-input: map-get($defaults, border-radius-input) !global;
 
 // The default color for box shadows
-$default-box-shadow-color: rgba( 0, 0, 0, .2 ) !global !default;
+$default-box-shadow-color: map-get($defaults, box-shadow-color) !global;
 // The default horizontal offset. Positive is to the right.
-$default-box-shadow-h-offset: .2em !global !default;
+$default-box-shadow-h-offset: map-get($defaults, box-shadow-h-offset) !global;
 // The default vertical offset. Positive is down.
-$default-box-shadow-v-offset: .2em !global !default;
+$default-box-shadow-v-offset: map-get($defaults, box-shadow-v-offset) !global;
 // The default blur length.
-$default-box-shadow-blur: .2em !global !default;
+$default-box-shadow-blur: map-get($defaults, box-shadow-blur) !global;
 // The default spread length.
-$default-box-shadow-spread: false !global !default;
+$default-box-shadow-spread: map-get($defaults, box-shadow-spread) !global;
 // The default shadow inset: inset or false (for standard shadow).
-$default-box-shadow-inset: false !global !default;
+$default-box-shadow-inset: map-get($defaults, box-shadow-inset) !global;
 
-$default-rank-max: 5 !global !default;
+$default-rank-max: map-get($defaults, ranking-scale) !global;
 
 // The default color for box texts
-$default-text-shadow-color: rgba( $color-text, .2 ) !global !default;
+$default-text-shadow-color: map-get($defaults, text-shadow-color) !global;
 // The default horizontal offset. Positive is to the right.
-$default-text-shadow-h-offset: 1px !global !default;
+$default-text-shadow-h-offset: map-get($defaults, text-shadow-h-offset) !global;
 // The default vertical offset. Positive is down.
-$default-text-shadow-v-offset: 1px !global !default;
+$default-text-shadow-v-offset: map-get($defaults, text-shadow-v-offset ) !global;
 // The default blur length.
-$default-text-shadow-blur: 0 !global !default;
+$default-text-shadow-blur: map-get($defaults, text-shadow-blur) !global;
 // The default shadow inset: inset or false (for standard shadow).
-$default-text-shadow-spread: false !global !default;
-
-$default-radius: 5px !global !default;
+$default-text-shadow-spread: map-get($defaults, text-shadow-spread) !global;

@@ -8,7 +8,7 @@
  * 								applied to force hardware acceleration
  */
 
-@mixin filter-blur( $radius: $default-radius, $hardware : false ) {
+@mixin filter-blur( $radius: $default-border-radius, $hardware : false ) {
 	// Exception for IE as blur behaviour/amount is different
 	$mixin-ie-blur : strip-unit( $radius ) * 3;
 	@if $mixin-ie-blur > 99 {
