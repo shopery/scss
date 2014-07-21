@@ -19,7 +19,6 @@
 		a {
 			& {
 				color:$color-text-background;
-				@include box-shadow(0 0 2px rgba($color-primary-dark, .2), 0 0 2px rgba($color-primary-dark, .2));
 				text-rendering: optimizeLegibility;
 				@include border-radius;
 			}
