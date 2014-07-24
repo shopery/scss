@@ -2,7 +2,7 @@
 	.msg-ok {
 		& {
 			border-color: $color-ok;
-			@include opacity-background($color-ok, .1);
+			@include background-transparent($color-ok, .1);
 		}
 		i {
 			color: adjust-lightness($color-ok, -25%);

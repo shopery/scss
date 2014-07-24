@@ -91,7 +91,7 @@
 			color:$color-text-background;
 			font-weight:bold;
 			font-size:$font-size-default;
-			@include opacity-background($color-text,.4);
+			@include background-transparent($color-text,.4);
 			@include border-radius;
 			padding:$spacing/4;
 		}

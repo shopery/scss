@@ -2,7 +2,7 @@
 	.msg-ko {
 		& {
 			border-color:$color-ko;
-			@include opacity-background($color-ko, .1);
+			@include background-transparent($color-ko, .1);
 		}
 		i {
 			color: adjust-lightness($color-ko, -25%);

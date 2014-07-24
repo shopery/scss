@@ -34,7 +34,7 @@
 	}
 
 	tbody tr:hover td {
-		@include opacity-background($color-primary, .1);
+		@include background-transparent($color-primary, .1);
 	}
 	tbody tr > td {
 		padding: $spacing/2 $spacing/2;

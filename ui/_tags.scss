@@ -101,7 +101,7 @@
 		font-size: $font-size-s;
 		color: $color-text;
 		@include background(linear-gradient(top, lighten($color-box, 10%) 50%, lighten($color-box, 15%) 100%));
-		@include gradient-ie(lighten($color-box, 5%), darken($color-box, 10%));
+		@include background-gradient-ie-old(lighten($color-box, 5%), darken($color-box, 10%));
 		z-index: 2;
 		@include box-shadow(0 2px $spacing/2 $color-text);
 		@include border-radius;
@@ -133,12 +133,12 @@
 
 	li.as-result-item em {
 		font-style: normal;
-		@include opacity-background($color-link, .1);
+		@include background-transparent($color-link, .1);
 		padding: 0;
 	}
 
 	li.as-result-item.active em {
-		@include opacity-background($color-text, .2);
+		@include background-transparent($color-text, .2);
 	}
 
 	/* Webkit Hacks  */

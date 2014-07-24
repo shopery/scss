@@ -30,7 +30,7 @@
 			vertical-align: baseline;
 			@include border-radius(200px);
 			text-align: center;
-			@include opacity-background($color-text-background, .7);
+			@include background-transparent($color-text-background, .7);
 		}
 	}
 

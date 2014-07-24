@@ -2,7 +2,7 @@
 	.msg-warning {
 		& {
 			border-color:$color-warning;
-			@include opacity-background($color-warning, .1);
+			@include background-transparent($color-warning, .1);
 		}
 		i {
 			color: adjust-lightness($color-warning, -35%);

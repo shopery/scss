@@ -1,11 +1,12 @@
-//#Line-height-standard Mixin
-// This mixin creates a standard line-height property, depending of the font size.
-
-// * Defaults: $font-size
-// * Example: @include line-height-standard( 15px );
+/**
+ * **Line height standard**
+ *  This mixin creates a standard line-height property, depending of the font size.
+ *
+ * @author Toni Pinel
+ *
+ * @param {Value}	$font-size ($font-size-default)	Font size
+ */
 
 @mixin line-height-standard( $font-size: $font-size-default ) {
-
-	$line-height-standardized: line-height-standard( $font-size );
-	@include rem-fallback( line-height, $line-height-standardized );
+	@include rem-fallback( line-height, $font-size );
 }
