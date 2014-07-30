@@ -10,6 +10,10 @@
 		&.right {
 			float: right;
 		}
+		ul {
+			word-spacing: inherit !important;
+			letter-spacing: inherit !important;
+		}
 		li {
 			display: inline-block;
 			padding: 0 1px;

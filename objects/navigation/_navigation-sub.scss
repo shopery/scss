@@ -114,13 +114,14 @@
 		$arrow-size: 8px;
 
 		& {
-			background: none;
-			filter: none;
+			@include background-gradient-ie-old($color-text-background,$color-box);
+			@include background-image(linear-gradient($color-text-background 45%,$color-box 152% ));
 		}
 		a {
 			& {
 				font-family: $font-face-title;
 				margin: 0;
+				padding: $spacing/2 $spacing;
 				@include rem-fallback(font-size, $font-size-m);
 			}
 			&:hover {
@@ -172,6 +173,10 @@
 	}
 
 	.navigation-sub.vertical {
+		& {
+			background-image: none;
+			filter: none;
+		}
 		li {
 			& {
 				margin-bottom: $spacing/4;
