@@ -18,14 +18,14 @@
 			color: contrast-color($color-box);
 		}
 		.box-lighten {
-			background: $color-text-background;
+			background: $color-background;
 		}
 	}
 
 	.box-text {
 		& {
-			background: $color-text-background;
-			color: contrast-color($color-text-background);
+			background: $color-background;
+			color: contrast-color($color-background);
 		}
 		& > .box-lighten {
 			background: $color-box;
@@ -61,14 +61,14 @@
 	}
 
 	.box-darken {
-		@include background-transparent($color-text, .3);
-		color: $color-text-background;
+		@include background-transparent($color-foreground, .3);
+		color: $color-background;
 		@include box-shadow(none);
 	}
 
 	.box-lighten {
-		@include background-transparent($color-text-background, .3);
-		color: $color-text;
+		@include background-transparent($color-background, .3);
+		color: $color-foreground;
 		@include box-shadow(none);
 	}
 
@@ -84,6 +84,6 @@
 
 	.box-aux {
 		background: $color-secondary;
-		color: $color-text-background;
+		color: $color-background;
 	}
 }

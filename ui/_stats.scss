@@ -11,7 +11,7 @@
 		}
 		canvas {
 			position:absolute;
-			background:$color-text-background;
+			background: $color-background;
 			margin:-1px;
 			@include border-radius;
 		}
@@ -28,7 +28,7 @@
 		}
 		.visualize-title {
 			display:block;
-			color:$color-text;
+			color: $color-foreground;
 			margin-bottom:$spacing/8;
 			@extend .fz-h3;
 			position:absolute;
@@ -71,7 +71,7 @@
 				margin-top:-$spacing/8;
 			}
 			.visualize-key-label {
-				color:$color-text;
+				color: $color-foreground;
 			}
 		}
 	}
@@ -88,10 +88,10 @@
 		}
 		.visualize-label {
 			display:block;
-			color:$color-text-background;
+			color: $color-background;
 			font-weight:bold;
 			font-size:$font-size-default;
-			@include background-transparent($color-text,.4);
+			@include background-transparent($color-foreground,.4);
 			@include border-radius;
 			padding:$spacing/4;
 		}
@@ -99,7 +99,7 @@
 
 	.visualize-pie-outside {
 		.visualize-label {
-			color:$color-text;
+			color: $color-foreground;
 			font-weight:normal;
 		}
 	}
@@ -120,12 +120,12 @@
 			position: absolute;
 			z-index: 100;
 			margin: $spacing/2;
-			background: $color-text-background;
+			background: $color-background;
 			padding: $spacing/4 $spacing/12 $spacing/4 $spacing/4;
 			@include border-radius(50px);
 			text-align: center;
 			display: block;
-			color: $color-text;
+			color: $color-foreground;
 		}
 		&:hover {
 			background: $color-link;

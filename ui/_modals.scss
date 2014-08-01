@@ -67,31 +67,31 @@
 		ordered & tabbed in a way that represents the nesting of the generated HTML.
 	*/
 	#cboxOverlay {
-		background:$color-text;
+		background: $color-foreground;
 	}
 	#colorbox { outline:0; }
-	#cboxContent { margin-top:$spacing; background:$color-text; }
+	#cboxContent { margin-top:$spacing; background: $color-foreground; }
 	.cboxIframe { background:#fff; }
 	#cboxError {
 		padding:$spacing*2;
-		border:1px solid $color-text-light;
+		border:1px solid $color-foreground-light;
 	}
 	#cboxLoadedContent {
-		border:$spacing/4 solid $color-text;
-		background:$color-text-background;
+		border:$spacing/4 solid $color-foreground;
+		background: $color-background;
 	}
 	#cboxTitle {
 		position:absolute;
 		top:-$spacing;
 		left:0;
-		color:$color-text-light;
+		color: $color-foreground-light;
 		@include text-shadow();
 	}
 	#cboxCurrent {
 		position:absolute;
 		top:-$spacing;
 		right:0px;
-		color:$color-text-light;
+		color: $color-foreground-light;
 		@include text-shadow();
 	}
 	#cboxLoadingGraphic {
@@ -99,7 +99,7 @@
 			text-indent:-9999px;
 		}
 		&:after {
-			color: $color-text;
+			color: $color-foreground;
 			position:absolute;
 			content: "\f110";
 			font-family:FontAwesome;
@@ -135,7 +135,7 @@
 		position:absolute;
 		top:-$spacing;
 		right:90px;
-		color:$color-text-background;
+		color: $color-background;
 	}
 
 	%cBoxGalleryButtons {
@@ -145,8 +145,8 @@
 			margin-top:-$spacing;
 			width:$spacing*1.5;
 			height:$spacing*2;
-			background:$color-text;
-			color:$color-text-background;
+			background: $color-foreground;
+			color: $color-background;
 			@include box-shadow(none);
 			text-indent:-9999px;
 			@include opacity(.5);
@@ -191,7 +191,7 @@
 			right:$spacing/2;
 			display:block;
 			text-indent:-9999px;
-			background:$color-text-background;
+			background: $color-background;
 			@include box-shadow(none);
 			@include border-radius($spacing*4);
 			width:$spacing;
@@ -199,7 +199,7 @@
 			@include opacity(.5);
 		}
 		&:after {
-			color:$color-text;
+			color: $color-foreground;
 			position:absolute;
 			right:$spacing/4;
 			font-family:FontAwesome;

@@ -21,13 +21,13 @@
 		@include rem-fallback(font-size, $font-size-m);
 		background: transparent;
 		text-align: left;
-		color: $color-text;
+		color: $color-foreground;
 		vertical-align: middle;
 	}
 	tbody {
-		outline: 2px solid $color-text-background;
+		outline: 2px solid $color-background;
 		border: 1px solid $color-box-light;
-		background: $color-text-background;
+		background: $color-background;
 	}
 	tbody tr:nth-child(odd) td {
 		background-color: $color-box-light;

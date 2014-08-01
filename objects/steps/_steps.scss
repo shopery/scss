@@ -20,7 +20,7 @@
 		padding:$spacing/2 $spacing;
 		margin:0;
 		text-transform:uppercase;
-		color:$color-text;
+		color: $color-foreground;
 		font-family:$font-face-title;
 		@include rem-fallback(font-size, $font-size-l);
 	}
@@ -63,7 +63,7 @@
 	}
 
 	.steps .active {
-		color:$color-text-background;
+		color: $color-background;
 	}
 
 	.steps .done {

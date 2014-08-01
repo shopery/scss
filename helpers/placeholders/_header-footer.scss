@@ -3,13 +3,13 @@
 		width: 100%;
 		margin-bottom: $spacing;
 		background: $color-header;
-		color: $color-text-background;
+		color: $color-background;
 		min-height: $spacing*4;
 		position: relative;
 		padding-top: $spacing/2;
 	}
 	& > a {
-		color: $color-text-background;
+		color: $color-background;
 	}
 	.logo {
 		max-width:75%;

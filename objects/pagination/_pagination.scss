@@ -35,8 +35,8 @@
 	.pagination {
 		a {
 			& {
-				color: $color-text;
-				@include background-transparent($color-text, .05);
+				color: $color-foreground;
+				@include background-transparent($color-foreground, .05);
 				border:1px solid $color-box;
 			}
 			&:hover {
@@ -46,8 +46,8 @@
 		}
 		.active {
 			a {
-				background:$color-text-background;
-				color: $color-text;
+				background: $color-background;
+				color: $color-foreground;
 			}
 		}
 	}

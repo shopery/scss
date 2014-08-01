@@ -2,13 +2,13 @@
 
 	.navigation-sub {
 		& {
-			@include background-gradient-ie-old($color-text-background,$color-box);
-			@include background-image(linear-gradient($color-text-background 75%,$color-box ));
+			@include background-gradient-ie-old($color-background,$color-box);
+			@include background-image(linear-gradient($color-background 75%,$color-box ));
 			@include border-radius(0);
 		}
 		a {
 			& {
-				color:$color-text;
+				color: $color-foreground;
 				text-rendering: optimizeLegibility;
 				margin: 0;
 			}
@@ -69,8 +69,8 @@
 				}
 				ul {
 					margin: 0;
-					@include background-gradient-ie-old($color-text-background,$color-box);
-					@include background-image(linear-gradient($color-text-background 75%,$color-box ));
+					@include background-gradient-ie-old($color-background,$color-box);
+					@include background-image(linear-gradient($color-background 75%,$color-box ));
 				}
 				li {
 					a {
@@ -79,7 +79,7 @@
 							background: transparent;
 							border-left: 0px none;
 							padding-left: $spacing*1.8;
-							color: $color-text;
+							color: $color-foreground;
 						}
 						&:hover {
 							@include background-transparent(#000, .05);
@@ -137,7 +137,7 @@
 			}
 			a {
 				& {
-					color: $color-text;
+					color: $color-foreground;
 					font-weight: bold;
 				}
 				&:hover {
@@ -154,7 +154,7 @@
 					position: absolute;
 					width: 0;
 					background: transparent;
-					border-bottom-color: $color-text-background;
+					border-bottom-color: $color-background;
 					bottom: -2px;
 					z-index: 100;
 				}
@@ -188,7 +188,7 @@
 					@if $object-style == gradient {
 						@include background-image(linear-gradient($color-primary-light, $color-primary));
 						@include background-gradient-ie-old($color-primary-light, $color-primary);
-						@include box-shadow(inset 0 1px 2px rgba($color-text-background, .5));
+						@include box-shadow(inset 0 1px 2px rgba($color-background, .5));
 						border-top: 1px solid $color-primary;
 						border-bottom: 1px solid $color-primary;
 					}
@@ -196,7 +196,7 @@
 						background: $color-primary;
 					}
 
-					color: $color-text-background;
+					color: $color-background;
 					padding: $spacing/4 $spacing/2;
 					@include border-radius;
 				}
@@ -239,7 +239,7 @@
 			ul {
 				& {
 					margin: 0 $spacing/2 $spacing/2;
-					@include background-transparent($color-text, .05);
+					@include background-transparent($color-foreground, .05);
 					@include border-radius(0 0 $default-border-radius $default-border-radius);
 					border: 1px solid darken($color-box, 5%);
 				}
@@ -282,7 +282,7 @@
 				a {
 					& {
 						font-weight: bold;
-						color: $color-text;
+						color: $color-foreground;
 					}
 					&:before {
 						content: "\f0da ";

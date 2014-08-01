@@ -30,22 +30,22 @@
 @if $object-style == flat {
 
 	.button, .button_s {
-		@include background-transparent($color-text, .25);
-		color:$color-text-background;
-		@include text-shadow(0 1px rgba($color-text, .3));
+		@include background-transparent($color-foreground, .25);
+		color: $color-background;
+		@include text-shadow(0 1px rgba($color-foreground, .3));
 	}
 	.button:hover {
-		@include background-transparent($color-text, .20);
+		@include background-transparent($color-foreground, .20);
 	}
 
 	.button:active {
-		@include background-transparent($color-text, .15);
+		@include background-transparent($color-foreground, .15);
 	}
 
 	.button-main {
 		background:$color-primary;
-		color:$color-text-background;
-		@include text-shadow(0 1px rgba($color-text, .3));
+		color: $color-background;
+		@include text-shadow(0 1px rgba($color-foreground, .3));
 	}
 
 	.button-main:hover {
@@ -58,8 +58,8 @@
 
 	.button-alt {
 		background:$color-secondary;
-		color:$color-text-background;
-		@include text-shadow(0 1px rgba($color-text, .3));
+		color: $color-background;
+		@include text-shadow(0 1px rgba($color-foreground, .3));
 	}
 
 	.button-alt:hover {
@@ -72,8 +72,8 @@
 
 	.button-ok {
 		background:$color-ok;
-		color:$color-text-background;
-		@include text-shadow(0 1px rgba($color-text, .3));
+		color: $color-background;
+		@include text-shadow(0 1px rgba($color-foreground, .3));
 	}
 
 	.button-ok:hover {
@@ -86,8 +86,8 @@
 
 	.button-ko {
 		background:$color-ko;
-		color:$color-text-background;
-		@include text-shadow(0 1px rgba($color-text, .3));
+		color: $color-background;
+		@include text-shadow(0 1px rgba($color-foreground, .3));
 	}
 
 	.button-ko:hover {
@@ -127,7 +127,7 @@
 		@include background-image(linear-gradient($color-box 30%, $color-box-dark 70%));
 		@include background-gradient-ie-old($color-box, $color-box-dark);
 		border: 1px solid $color-box-dark;
-		color: $color-text;
+		color: $color-foreground;
 	}
 
 	.button-main {
@@ -147,14 +147,14 @@
 		@include background-image(linear-gradient(lighten($color-ok, 10%) 20%, $color-ok 80%));
 		@include background-gradient-ie-old(lighten($color-ok, 10%), $color-ok);
 		border: 1px solid $color-ok;
-		color: $color-text-background;
+		color: $color-background;
 	}
 
 	.button-ko {
 		@include background-image(linear-gradient(lighten($color-ko, 10%) 20%, $color-ko 80%));
 		@include background-gradient-ie-old(lighten($color-ko, 10%), $color-ko);
 		border: 1px solid $color-ko;
-		color: $color-text-background;
+		color: $color-background;
 	}
 
 
@@ -164,13 +164,13 @@
 			font-family: $font-face-title;
 			padding: $font-size-m/3 $font-size-m;
 			@include rem-fallback(font-size, $font-size-m);
-			@include box-shadow(0px 1px 0px rgba($color-text, .5));
+			@include box-shadow(0px 1px 0px rgba($color-foreground, .5));
 		}
 		&:hover {
-			@include box-shadow(0px 1px 0px rgba($color-text, .5), inset 0 0 100px rgba($color-text-background, .5));
+			@include box-shadow(0px 1px 0px rgba($color-foreground, .5), inset 0 0 100px rgba($color-background, .5));
 		}
 		&:active {
-			@include box-shadow(inset 1px 1px 3px rgba($color-text, .5));
+			@include box-shadow(inset 1px 1px 3px rgba($color-foreground, .5));
 		}
 		&.small {
 			font-family: $font-face-default;

@@ -1,6 +1,6 @@
 $fa-css-prefix: "icon";
-$fa-border-color: $color-text;
-$fa-inverse: $color-text-background;
+$fa-border-color: $color-foreground;
+$fa-inverse: $color-background;
 
 @import "../external/font-awesome/_font-awesome.scss";
 
