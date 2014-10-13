@@ -10,17 +10,6 @@
 
 @import 'basic-tools';
 
-@import "objects/forms/_form-search-ie";
-
-form {
-  legend {
-	margin-bottom: $spacing;
-  }
-  input[type='date'], input[type='datetime-local'], input[type='month'], input[type='number'] {
-	display:inline-block !important;
-  }
-}
-
 .mobile, .tablet {
 	display:none !important;
 }
