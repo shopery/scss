@@ -21,9 +21,37 @@
 		line-height: 20px;
 	}
 
+	// SMALL ICONS
 	[class*='button'].small {
-		padding: $spacing/6 $spacing/4;
-		@include rem-fallback(font-size, $font-size-xs);
+		& {
+			padding: $spacing/6 $spacing/2;
+			@include rem-fallback(font-size, $font-size-xs);
+		}
+		[class*='icon-'] {
+			margin-right: $spacing/8;
+			margin-left: -$spacing/8;
+		}
+	}
+
+	[class*='button'][class*='icon-'].small {
+		padding: $spacing/8;
+		min-height: 18px;
+		min-width: 18px;
+	}
+
+	// REGULAR WITH ICONS
+	[class*='button'][class*='icon-'] {
+		padding: $spacing/4;
+		font-family: 'FontAwesome' !important;
+		min-height: 26px;
+		min-width: 26px;
+	}
+
+	[class*='button'] {
+		[class*='icon-'] {
+			margin-right: $spacing/4;
+			margin-left: -$spacing/4;
+		}
 	}
 }
 
