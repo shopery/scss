@@ -10,17 +10,13 @@
 	}
 	li {
 		& {
-			float:left;
+			display: inline-block;
+			vertical-align: top;
 		}
 		&.active {
 			a {
 				position: relative;
 			}
-		}
-	}
-	& > ul {
-		& {
-			overflow: hidden;
 		}
 	}
 	a {
