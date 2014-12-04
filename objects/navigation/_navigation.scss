@@ -2,7 +2,7 @@
 	[class^='navigation'] {
 		@extend %navigation;
 	}
-	[class^='navigation'].vertical {
+	[class^='navigation'].navigation-vertical {
 		@extend %navigation-vertical;
 		a {
 			margin-right:$spacing/6 !important;
@@ -40,9 +40,29 @@
 				}
 			}
 		}
-		ul > ul {
+		ul ul {
 			& {
+				margin-top: 0;
 				background: $color-primary-dark;
+			}
+			li {
+				a {
+					& {
+						font-size: $font-size-s !important;
+						background: none;
+					}
+				}
+				&.active {
+					a {
+						margin: 0;
+						@include border-radius(0);
+					}
+				}
+			}
+		}
+		&.navigation-vertical {
+			li, a {
+				margin: 0 !important;
 			}
 		}
 	}
@@ -91,7 +111,15 @@
 				}
 			}
 		}
-		&.vertical {
+		ul {
+			ul {
+				a {
+					font-size: $font-size-s !important;
+					background: none;
+				}
+			}
+		}
+		&.navigation-vertical {
 			a {
 				@include border-radius($default-border-radius);
 				margin: $spacing/2 !important;
