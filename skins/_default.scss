@@ -92,5 +92,7 @@ $defaults: (
 	text-shadow-h-offset: 1px,
 	text-shadow-v-offset: 1px,
 	text-shadow-blur: 0,
-	text-shadow-spread: false
+	text-shadow-spread: false,
+	grid-container-width: 1140px,
+	grid-columns: 12
 ) !global !default;

@@ -1,7 +1,7 @@
 @import "susy";
 
-$grid-container-width: 1140px;
-$grid-columns: 12;
+$grid-container-width: map-get($defaults, grid-container-width);
+$grid-columns: map-get($defaults, grid-columns);
 
 $susy: (
   flow: ltr,
