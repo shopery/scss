@@ -114,8 +114,8 @@
 		$arrow-size: 8px;
 
 		& {
-			@include background-gradient-ie-old($color-text-background,$color-box);
-			@include background-image(linear-gradient($color-text-background 45%,$color-box 152% ));
+			@include background-gradient-ie-old($color-background,$color-box);
+			@include background-image(linear-gradient($color-background 45%,$color-box 152% ));
 		}
 		a {
 			& {
