@@ -1,21 +1,17 @@
 @import "susy";
 
-$grid-container-width: map-get($defaults, grid-container-width);
-$grid-columns: map-get($defaults, grid-columns);
-
 $susy: (
-  flow: ltr,
-  math: fluid,
-  output: float,
-  gutter-position: after,
-  container: auto,
-  container-position: center,
-  columns: $grid-columns,
-  gutters: .50,
-  column-width: false,
-  global-box-sizing: content-box,
+	math: fluid,
+	output: float,
+	gutter-position: after,
+	container: auto,
+	column-width: false,
+	global-box-sizing: content-box,
+	flow: map-get($grid, flow),
+	container-position: map-get($grid, container-position),
+	columns: 12,
+	gutters: map-get($grid, gutters)
 );
-
 
 *, *:after, *:before {
 	-webkit-box-sizing: border-box;
@@ -24,12 +20,14 @@ $susy: (
 }
 
 .grid {
-	@include container($grid-container-width);
+	@include container(map-get($grid, container-width));
 }
 
 body > .grid:first-of-type {
 	& {
-		padding: 0 $spacing;
+		@if map-get($grid, global-box-sizing) != '100%' {
+			padding: 0 $spacing;
+		}
 	}
 }
 

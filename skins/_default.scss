@@ -1,15 +1,15 @@
-$font-line-height: (
+$font-line-height-default: (
 	base: 1.5em,
 	title: 1.2em
 ) !global !default;
 
-$font-faces: (
+$font-faces-default: (
 	default: 'Tahoma, Arial, Verdana, sans-serif',
 	title: "'Open Sans Condensed','Arial Narrow', Tahoma, sans-serif",
 	icons: true
 ) !global !default;
 
-$font-sizes: (
+$font-sizes-default: (
 	base: 14px,
 	xxxl: 2.2rem,
 	xxl: 1.7rem,
@@ -25,7 +25,7 @@ $font-sizes: (
 	xxxxs: .5rem
 ) !global !default;
 
-$colors: (
+$colors-default: (
 	foreground: #000,
 	foreground-light: auto,
 	foreground-dark: auto,
@@ -55,7 +55,7 @@ $colors: (
 	input-focus: #ffffea
 ) !global !default;
 
-$objects: (
+$objects-default: (
 	style: flat,
 	boxes: default,
 	buttons: default,
@@ -78,7 +78,7 @@ $objects: (
 	tags: default
 ) !global !default;
 
-$defaults: (
+$defaults-default: (
 	spacing: 1.6em,
 	border-radius: 3px,
 	box-shadow-color: rgba( 0, 0, 0, .2 ),
@@ -91,8 +91,29 @@ $defaults: (
 	text-shadow-color: rgba( 0, 0, 0, .2 ),
 	text-shadow-h-offset: 1px,
 	text-shadow-v-offset: 1px,
-	text-shadow-blur: 0,
-	text-shadow-spread: false,
-	grid-container-width: 1140px,
-	grid-columns: 12
+	text-shadow-blur: 0,grun
+	text-shadow-spread: false
 ) !global !default;
+
+$grid-default: (
+	container-width: 100%,
+	gutters: .50,
+	flow: ltr,
+	container-position: center,
+) !global !default;
+
+$font-line-height-custom: () !global !default;
+$font-faces-custom: () !global !default;
+$font-sizes-custom: () !global !default;
+$colors-custom: () !global !default;
+$objects-custom: () !global !default;
+$defaults-custom: () !global !default;
+$grid-custom: () !global !default;
+
+$font-line-height : map-merge($font-line-height-default, $font-line-height-custom) !global;
+$font-faces : map-merge($font-faces-default, $font-faces-custom) !global;
+$font-sizes : map-merge($font-sizes-default, $font-sizes-custom) !global;
+$colors : map-merge($colors-default, $colors-custom) !global;
+$objects : map-merge($objects-default, $objects-custom) !global;
+$defaults : map-merge($defaults-default, $defaults-custom) !global;
+$grid : map-merge($grid-default, $grid-custom) !global;

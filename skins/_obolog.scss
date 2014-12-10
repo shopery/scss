@@ -1,16 +1,16 @@
 @if $skin == 'obolog' {
 
-	$line-height: (
+	$line-height-custom: (
 		base: 1.5em,
 		title: 1.2em
 	) !global !default;
 
-	$font-face: (
+	$font-face-custom: (
 		default: "Tahoma, Arial, Verdana, sans-serif",
 		title: "'Open Sans Condensed', 'Arial Narrow', Tahoma, sans-serif"
 	) !global !default;
 
-	$font-size: (
+	$font-size-custom: (
 		base: 14px,
 		xxxl: 2.2rem,
 		xxl: 1.7rem,
@@ -26,7 +26,7 @@
 		xxxxs: .5rem
 	) !global !default;
 
-	$colors: (
+	$colors-custom: (
 		foreground:	#333,
 		foreground-light: auto,
 		foreground-dark: auto,
@@ -56,7 +56,7 @@
 		input-focus: #ffffea
 	) !global !default;
 
-	$objects: (
+	$objects-custom: (
 		style: gradient,
 		boxes: default,
 		buttons: default,
@@ -79,7 +79,7 @@
 		tags: default//personalized
 	) !global !default;
 
-	$defaults: (
+	$defaults-custom: (
 		spacing: 1.6em,
 		border-radius: 3px,
 		box-shadow-color: rgba( 0, 0, 0, .2 ),
@@ -93,12 +93,15 @@
 		text-shadow-h-offset: 1px,
 		text-shadow-v-offset: 1px,
 		text-shadow-blur: 0,
-		text-shadow-spread: false
+		text-shadow-spread: false,
+		grid-container-width: 100%,
+		grid-columns: 12,
+		grid-gutters: .50
 	) !global !default;
 
 	.delete {
 		color: #EE3728;
 		text-decoration: none !important;
 	}
-
+	
 }
