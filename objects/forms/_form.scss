@@ -1,7 +1,6 @@
 @if $object-form != false {
 	[class^='form'] {
 		& {
-			overflow: hidden;
 			font-size: $font-size-m;
 		}
 		> fieldset {
@@ -48,10 +47,7 @@
 			font-size: $font-size-default;
 		}
 		ul {
-			&.horizontal {
-				li, input {
-					display: inline-block;
-				}
+			&.list-horizontal {
 				li {
 					margin-right: $spacing;
 				}

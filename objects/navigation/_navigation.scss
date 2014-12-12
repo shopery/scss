@@ -64,6 +64,9 @@
 			li, a {
 				margin: 0 !important;
 			}
+			& > ul > li {
+				border-bottom: 1px solid rgba(contrast-color($color-primary),.3);
+			}
 		}
 	}
 }
