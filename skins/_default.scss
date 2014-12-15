@@ -22,7 +22,8 @@ $font-sizes-default: (
 	xs: .75rem,
 	xxs: .7rem,
 	xxxs: .6rem,
-	xxxxs: .5rem
+	xxxxs: .5rem,
+	title-exponential: 1.5
 ) !global !default;
 
 $colors-default: (
@@ -75,7 +76,8 @@ $objects-default: (
 	slides: default,
 	steps: default,
 	tabs: default,
-	tags: default
+	tags: default,
+	labels: default
 ) !global !default;
 
 $defaults-default: (

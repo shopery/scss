@@ -53,85 +53,14 @@ a {
 	.hidden {
 		display: none;
 	}
-	.hidden-soft {
-		display: none;
-	}
-	.visible,
-	.block {
-		display: block;
-	}
-	.invisible {
-		visibility: hidden;
-	}
-	.inline {
-		display: inline;
-	}
-	.inline-block {
-		@include inline-block;
-	}
-	.left-align {
-		text-align: left;
-	}
-	.right-align {
-		text-align: right;
-	}
-	.center-align {
-		text-align: center;
-	}
-	.center {
-		margin: 0 auto;
-	}
-	.float-left {
-		float: left;
-	}
-	.float-right {
-		float: right;
-	}
-	.no-pointer-events {
-		pointer-events: none;
-	}
-	.no-opacity {
-		opacity: 0;
-		pointer-events: none;
-	}
-	.txthide {
-		& {
-			@include inline-block;
-			overflow: hidden;
-			width: 1.1em;
-			vertical-align: bottom;
-			white-space: nowrap;
-		}
-		&:before {
-			@include inline-block;
-			text-align: center;
-		}
-	}
 	img,
 	object {
 		max-width: 100%;
 		height: auto;
 	}
 
-	/* @desc: Image replacement. More info on nicolasgallagher.com/another-css-image-replacement-technique */;
-	.ir {
-		font: 0/0 a;
-		text-shadow: none;
-		color: transparent;
-	}
 /* @endgroup HELPERS */
 
-/* @group CLEARFIX */
-	/* @desc: More info on: nicolasgallagher.com/micro-clearfix-hack/icolasgallagher.com/micro-clearfix-hack */;
-	.clearfix:before,
-	.clearfix:after {
-		display: table;
-		content: " ";
-	}
-	.clearfix:after {
-		clear: both;
-	}
-/* @endgroup CLEARFIX */
 
 ul, ol {
 	padding-left: 0;
@@ -160,6 +89,6 @@ nav li, .nav li {
 }
 
 small {
-	@include rem-fallback(font-size, $font-size-xxs, true);
+	@include rem-fallback(font-size, $font-size-xxs, false);
 	line-height: $base-line-height;
 }

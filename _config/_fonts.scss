@@ -79,3 +79,8 @@ $font-size-xxxs: map-get($font-sizes, xxxs) !global;
  * @group fonts
  */
 $font-size-xxxxs: map-get($font-sizes, xxxxs)!global;
+
+/**
+ * @group fonts
+ */
+$font-title-exponential: map-get($font-sizes, title-exponential )!global;

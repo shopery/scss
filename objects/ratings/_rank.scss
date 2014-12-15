@@ -1,9 +1,9 @@
 @if $object-ratings != false {
 	@for $rank from 0 through $default-rank-max {
-		.rank-#{$rank}-5 {
-			@extend %rank;
+		.rating-#{$rank}-5 {
+			@extend %rating;
 		}
-		.rank-#{$rank}-5:before {
+		.rating-#{$rank}-5:before {
 			$star-content: '';
 			@for $star from 1 through 5 {
 				@if $star > $rank {

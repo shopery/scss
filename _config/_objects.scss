@@ -146,3 +146,11 @@ $object-tabs: map-get($objects, tabs) !global;
  * @link http://www.frontendcore.com/css/tabs.html
  */
 $object-tags: map-get($objects, tags) !global;
+
+/**
+ * Defines the availability and style of the labels objects. To avoid this object to be included in your scss set it to false.
+ * Posible values: default, false
+ * @type string
+ * @link http://www.frontendcore.com/css/labels.html
+ */
+$object-labels: map-get($objects, labels) !global;

@@ -5,13 +5,9 @@
 			margin: 0;
 			display: initial;
 		}
-		[class*='button'], .button {
+		[class*='button-'], .button {
 			margin-right: 1px;
 			border-radius: 0;
-		}
-		[class*='button'][class*='icon-'] {
-			margin-right: $spacing/4;
-			border-right: 1px solid $color-background;
 		}
 		[class*='button']:first-child {
 			@include border-radius($default-border-radius 0 0 $default-border-radius);

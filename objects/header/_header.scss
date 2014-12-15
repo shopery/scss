@@ -3,6 +3,7 @@
 	.header {
 		& {
 			@extend %header-footer;
+			margin-bottom: $spacing;
 		}
 		.navigation {
 			border: 0px none;

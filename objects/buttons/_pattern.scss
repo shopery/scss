@@ -12,4 +12,22 @@
 	&:hover {
 		text-decoration: none;
 	}
+	&[class*='icon-'] {
+		& {
+			padding-left: $spacing/1.5;
+		}
+
+		&:after, &:before {
+			font-family: "fontawesome" !important;
+
+		}
+		&:after {
+			margin-left: $spacing/4;
+
+		}
+		&:before {
+			margin-right: $spacing/4;
+
+		}
+	}
 }

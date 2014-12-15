@@ -12,7 +12,7 @@
 		}
 	}
 
-	ol[class*='list-'], ol.list {
+	ol.list, ol.list-horizontal {
 		list-style: decimal outside;
 		padding-left: $spacing;
 	}

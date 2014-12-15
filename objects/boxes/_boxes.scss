@@ -22,7 +22,7 @@
 		}
 	}
 
-	.box-text {
+	.box-background {
 		& {
 			background: $color-background;
 			color: contrast-color($color-background);
@@ -30,7 +30,7 @@
 		& > .box-lighten {
 			background: $color-box;
 		}
-		.box-text {
+		.box-background {
 			border: 1px solid $color-box;
 		}
 	}
@@ -72,7 +72,7 @@
 		@include box-shadow(none);
 	}
 
-	.box-main {
+	.box-primary {
 		& {
 			background: $color-primary;
 			color: contrast-color($color-primary);
@@ -82,7 +82,7 @@
 		}
 	}
 
-	.box-aux {
+	.box-secondary {
 		background: $color-secondary;
 		color: $color-background;
 	}
