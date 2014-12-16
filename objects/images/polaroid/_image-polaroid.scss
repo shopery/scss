@@ -1,10 +1,10 @@
 @if $object-image-polaroid != false {
 
-	img.polaroid {
+	img.image-polaroid {
 		@extend %images-polaroid;
 	}
 
-	a.polaroid {
+	a.image-polaroid {
 		& {
 			text-decoration:none;
 			display:inline-block;

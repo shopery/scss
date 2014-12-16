@@ -1,4 +1,5 @@
 %images-circle {
 	@include border-radius(50%);
-	border:$spacing/2 solid $color-box;
+	border-style: solid;
+	border-color:$color-box;
 }
