@@ -1,3 +1,24 @@
+/* Description:
+Provides a common system for setting font sizes and font title appearance between HTML elements.
+
+Usage:
+Mark the element with the desired font class.
+
+Complete acronym reference based on Emmet:
+
+FIRST 2 LETTERS
+fz = font-size
+
+WORDS AFTER THE DASH
+The words after the dash are based on shirt sizes or heading elements:
+h1, h2, h3, h4, h5
+xs, s, m, l, xl, xxl
+
+EXAMPLES
+fz-l
+fz-h1
+*/
+
 %title {
 	& {
 		font-family:$font-face-title;

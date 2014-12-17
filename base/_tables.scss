@@ -17,8 +17,6 @@
 		margin: 0 0 $spacing/2;
 		border-bottom: 1px solid $color-box;
 		font-weight: normal;
-		font-family: $font-face-title;
-		@include rem-fallback(font-size, $font-size-m);
 		background: transparent;
 		text-align: left;
 		color: $color-foreground;
@@ -30,7 +28,7 @@
 		background: $color-background;
 	}
 	tbody tr:nth-child(odd) td {
-		background-color: $color-box-light;
+		background-color: rgba($color-box, .5);
 	}
 
 	tbody tr:hover td {

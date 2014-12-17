@@ -1,30 +1,39 @@
-.c-text, .c-text:before, .c-text:after {
-	color: $color-foreground !important;
-}
-.c-text-light, .c-text-light:before, .c-text-light:after {
-	color: $color-foreground-light !important;
-}
-.c-background,.c-background:before, .c-background:after {
-	color: $color-background !important;
-}
-.c-primary, .c-main {
-	color: $color-primary !important;
-}
-.c-ko {
-	color: $color-ko !important;
-}
-.c-ok {
-	color: $color-ok !important;
-}
+/* Description:
+Provides a common system for setting colors between HTML elements.
 
-.bg-box {
-	@extend %bg-box;
-}
+Usage:
+Mark the element with the desired color class.
 
-.bg-box-dark {
-	@extend %bg-box-dark;
-}
+Complete acronym reference based on Emmet:
 
-.bg-background {
-	@extend %bg-background;
+FIRST 2 LETTERS
+c = color
+bg = background
+
+WORDS AFTER THE DASH
+The words after the dash are based on the name of the sass variables to assign colors:
+primary
+secondary
+box
+ok
+ko
+
+EXAMPLES
+c-secondary
+c-box
+bg-primary
+bg-ok
+*/
+
+$colors-list: 'foreground','background','primary','secondary','box','ko','ok','info','warning' ;
+
+@each $color in $colors-list {
+
+	.c-#{$color}, .c-#{$color}:before, .c-#{$color}:after {
+		color: map-get($colors, $color) !important;
+	}
+
+	.bg-#{$color}, .bg-#{$color}:before, .bg-#{$color}:after {
+		background-color: map-get($colors, $color) !important;
+	}
 }

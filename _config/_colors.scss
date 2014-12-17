@@ -85,21 +85,21 @@ $color-link-background: map-get($colors, link-hover-background) !global;
 /**
  * Color used for the default box. Grey can be a great candidate here.
  */
-$color-box: map-get($colors, contrast) !global;
+$color-box: map-get($colors, box) !global;
 
 /**
  * Light variant of $color-box.
  * By Default is set to auto, so it should use lighten or darken functions (depends on the brightness) to create the variant.
  * You can specify a color in your $colors map to avoid the auto color.
  */
-$color-box-light: map-get($colors, contrast-light) !global;
+$color-box-light: map-get($colors, box-light) !global;
 
 /**
  * Dark variant of $color-box.
  * By Default is set to auto, so it should use lighten or darken functions (depends on the brightness) to create the variant.
  * You can specify a color in your $colors map to avoid the auto color.
  */
-$color-box-dark: map-get($colors, contrast-dark) !global;
+$color-box-dark: map-get($colors, box-dark) !global;
 
 /**
  * Background color for the header.
@@ -119,12 +119,12 @@ $color-info: map-get($colors, info) !global;
 /**
  * Color for the success objects, such as msg-ok boxes.
  */
-$color-ok: map-get($colors, success) !global;
+$color-ok: map-get($colors, ok) !global;
 
 /**
  * Color for the error objects, such as msg-ko boxes.
  */
-$color-ko : map-get($colors, error) !global;
+$color-ko : map-get($colors, ko) !global;
 
 /**
  * Color for the warning objects, such as msg-warning boxes.

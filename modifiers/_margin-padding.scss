@@ -1,39 +1,36 @@
-//	Description:
-//	Provides a common system for setting paddings and margins between HTML elements.
-//	We have setted 4 sizes for each property, so when we have to add some spacing between elements we can use them.
+/* Description:
+Provides a common system for setting paddings and margins between HTML elements.
+We have setted 4 sizes for each property, so when we have to add some spacing between elements we can use them.
 
-//	Usage:
-//	Mark the element with the desired spacing class.
 
-//	Spacing classnames are an acronym of three properties: type, position an size.
+Usage:
+Mark the element with the desired spacing class.
 
-//	E.g. .pt-m   it's the class needed for setting padding top medium ($spacing/2)
+Spacing classnames are an acronym of three properties: type, position an size.
 
-//	Complete acronym reference
+E.g. .pt-m   it's the class needed for setting padding top medium ($spacing/2)
 
-//	FIRST LETTERS
-//	p = padding
-//	m = margin
+Complete acronym reference based on Emmet:
 
-//	SECOND LETTERS
-//	a = all
-//	t = top
-//	r = right
-//	b = bottom
-//	l = left
-//	h = horizontal
-//	v = vertical
+FIRST LETTER
+p = padding
 
-//	LAST LETTER
-//	s, m, l, n
-//	s = small( $spacing/4 )
-//	m = medium( $spacing/2 )
-//	l = large( $spacing )
-//	xl = extra large ( $spacing*2 )
-//	n = none( 0 )
+SECOND LETTER
+a = all
+t = top
+r = right
+b = bottom
+l = left
+h = horizontal
+v = vertical
 
-//	Reference:
-//	http://docs.emmet.io/cheat-sheet/
+LAST LETTER
+n = none ( 0 )
+s = small ( $spacing/4 )
+m = medium ( $spacing/2 )
+l = large ( $spacing )
+xl = extra large ( $spacing*2 )
+*/
 
 .pt-n, .pv-n, .pa-n {
 	padding-top: 0 !important;

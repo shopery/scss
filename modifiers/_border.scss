@@ -1,29 +1,31 @@
-//	Description:
-//	Provides a common system for setting border properties between HTML elements.
-//	If you need more classes related to border is only allow used the emmet references.
+/* Description:
+Provides a common system for setting border properties between HTML elements.
 
-//	Usage:
-//	Mark the element with the desired border class.
+Usage:
+Mark the element with the desired border class.
 
-//	Complete acronym reference
+Complete acronym reference based on Emmet:
 
-//	FIRST LETTERS
-//	bd = border
+FIRST 2 LETTERS
+bd = border
 
-//	SECOND LETTERS
-//	a = all
-//	t = top
-//	r = right
-//	b = bottom
-//	l = left
-//	h = horizontal
-//	v = vertical
+THIRD LETTERS
+a = all
+t = top
+r = right
+b = bottom
+l = left
+h = horizontal
+v = vertical
 
-//	Reference:
-//	http://docs.emmet.io/cheat-sheet/
+LAST LETTER
+n = none
+s = small (1px)
+m = medium
+l = large
+xl = extra large
+*/
 
-
-//	Border
 .bda-n {
 	border-width: 0 !important;
 }
@@ -63,7 +65,6 @@
 .bdl-s, .bdh-s {
 	border-left-width: 1px !important;
 }
-
 
 .bda-m {
 	border-width: $spacing/4 !important;
