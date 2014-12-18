@@ -95,3 +95,11 @@ h5, .fz-h5 {
 	@include rem-fallback(font-size, $font-size-xxs, true);
 	line-height: $base-line-height;
 }
+
+.fw-n {
+	font-weight: normal;
+}
+
+.fw-b {
+	font-weight: bold;
+}
