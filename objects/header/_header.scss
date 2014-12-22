@@ -18,6 +18,10 @@
 			}
 		}
 	}
+	
+	.header-spacing {
+		display: none;
+	}
 
 }
 
@@ -39,3 +43,18 @@
 	}
 }
 
+@mixin mobile-header(){
+	.header-spacing {
+		height: 68px;
+		display: block;
+	}
+	.header {
+		& {
+			position: fixed;
+			top: 0;
+		}
+		.logo img {
+			max-width: 180px !important;
+		}
+	}
+}

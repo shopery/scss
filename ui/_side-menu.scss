@@ -11,11 +11,9 @@
 			width:260px;
 			overflow-x:none;
 			overflow-y:auto;
-			font-family: $font-face-default;
-			font-size: $font-size-s;
-			background:lighten($color-foreground, 10%);
-			color: $color-background;
-			@include box-shadow(inset 0 0 5px 5px lighten($color-foreground, 5%));
+			background:$color-primary;
+			color: contrast-color($color-primary);
+			@include box-shadow(0 0 $spacing/4 rgba($color-foreground, .4))
 		}
 		.sidr-inner {
 			padding:0 0 $spacing;
@@ -53,78 +51,13 @@
 			margin-left:$spacing;
 			margin-right:$spacing;
 		}
-		ul {
-			display:block;
-			margin:0 0 $spacing;
-			padding:0;
-			border-top:1px solid lighten($color-foreground, 10%);
-			border-bottom:1px solid lighten($color-foreground, 5%);
-			li {
-				display:block;
-				margin:0;
-				line-height:48px;
-				border-top:1px solid lighten($color-foreground, 5%);
-				border-bottom:1px solid lighten($color-foreground, 10%);
-				&:hover, &.active, &.sidr-class-active {
-					border-top:none;
-					line-height:49px;
-				}
-				&:hover > {
-					a, span {
-						@include box-shadow(inset 0 0 $spacing 3px lighten($color-foreground, 5%));
-					}
-				}
-				&.active > {
-					a, span {
-						@include box-shadow(inset 0 0 $spacing 3px lighten($color-foreground, 5%));
-
-					}
-				}
-				&.sidr-class-active > {
-					a, span {
-						@include box-shadow(inset 0 0 $spacing 3px lighten($color-foreground, 5%));
-					}
-				}
-				a, span {
-					padding:0 $spacing;
-					display:block;
-					text-decoration:none;
-					color: $color-background;
-				}
-				ul {
-					border-bottom:none;
-					margin:0;
-					li {
-						line-height:40px;
-						font-size:13px;
-						&:last-child {
-							border-bottom:none;
-						}
-						&:hover, &.active, &.sidr-class-active {
-							border-top:none;
-							line-height:41px;
-						}
-						&:hover > {
-							a, span {
-								@include box-shadow(inset 0 0 $spacing 3px lighten($color-foreground, 5%));
-							}
-						}
-						&.active > {
-							a, span {
-								@include box-shadow(inset 0 0 $spacing 3px lighten($color-foreground, 5%));
-							}
-						}
-						&.sidr-class-active > {
-							a, span {
-								@include box-shadow(inset 0 0 $spacing 3px lighten($color-foreground, 5%));
-							}
-						}
-						a, span {
-							color:rgba($color-foreground, 0.8);
-							padding-left:$spacing*2;
-						}
-					}
-				}
+		.sidr-inner {
+			@extend %navigation;
+			@extend .navigation;
+			@extend %navigation-vertical;
+			@extend .navigation-vertical;
+			.hidden {
+				display: block !important;
 			}
 		}
 	}
