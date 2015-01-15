@@ -64,6 +64,35 @@
 				padding: 0 0 $spacing;
 			}
 		}
+		.wysiwyg {
+			@extend %field;
+			&:focus {
+				&:before {
+					font-family: "fontawesome", sans-serif;
+					content: attr(data-help);
+					font-size: $font-size-default;
+					background: rgba($color-info, .2);
+					width: 100%;
+					padding: $spacing/2;
+					top: 0;
+					left: 0;
+					position: absolute;
+
+				}
+				& {
+					padding-top: $spacing*2.5;
+					background: transparent;
+				}
+
+			}
+		}
+		.wysiwyg-textarea {
+			padding: 0px !important;
+			background: transparent;
+			border: 0px none !important;
+			height: 1px !important;
+			min-height: 1px !important;
+		}
 		.error-fields {
 			label {
 				& {
