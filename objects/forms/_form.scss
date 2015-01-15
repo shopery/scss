@@ -65,7 +65,10 @@
 			}
 		}
 		.wysiwyg {
-			@extend %field;
+			& {
+				@extend %field;
+				position: relative;
+			}
 			&:focus {
 				&:before {
 					font-family: "fontawesome", sans-serif;
@@ -81,7 +84,7 @@
 				}
 				& {
 					padding-top: $spacing*2.5;
-					background: transparent;
+					background: $color-background;
 				}
 
 			}
