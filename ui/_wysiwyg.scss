@@ -50,12 +50,15 @@
 		left: 0;
 		height: 100% !important;
 		width: 100% !important;
+		z-index: 10000;
+		overflow: auto !important;
 	}
 	.fc-wysiwyg-switch {
 		position: absolute;
 		right: 0;
 		margin-top: -$spacing*2;
 		font-size: $font-size-default;
+		z-index: 10001;
 	}
 	.fc-wysiwyg-switch-full-screen {
 		position: fixed;
