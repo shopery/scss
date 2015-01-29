@@ -548,7 +548,7 @@
 					color: #ddd;
 				}
 				&:after {
-					content: "](" attr(href) ")";
+					content: "(" attr(href) ")";
 					color: #ddd;
 				}
 			}

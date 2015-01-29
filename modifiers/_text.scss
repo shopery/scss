@@ -7,6 +7,7 @@ Mark the element with the desired text class.
 Complete acronym reference based on Emmet:
 
 FIRST TWO LETTERS
+va = vertical-align
 ta = text-align
 td = text-decoration
 
@@ -16,8 +17,20 @@ c = center
 r = right
 u = underline
 n = none
+m = middle
+t = top
+b = bottom
 */
 
+.va-m {
+	vertical-align: middle !important;
+}
+.va-b {
+	vertical-align: bottom !important;
+}
+.va-t {
+	vertical-align: top !important;
+}
 .ta-l {
 	text-align: left !important;
 }

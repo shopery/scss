@@ -1,34 +1,103 @@
-// Loads the SCSS for Modals UI
-$ui-modals: true !global !default;
+/**
+ * Includes the classes at main css for Modals UI
+ * @type boolean
+ * @link http://www.frontendcore.com/callouts/modals.html
+ * @group User Interface
+ */
+$ui-modals: map-get($ui, modals) !global;
 
-// Loads the SCSS for Tags input UI
-$ui-tags: true !global !default;
+/**
+ * Includes the classes at main css for Tags UI
+ * @type boolean
+ * @link http://www.frontendcore.com/forms/tags-fields.html
+ * @group User Interface
+ */
+$ui-tags: map-get($ui, tags) !global;
 
-// Loads the SCSS for Code pre UI
-$ui-code: true !global !default;
+/**
+ * Includes the classes at main css for Code UI
+ * @type boolean
+ * @link http://www.frontendcore.com/content/code.html
+ * @group User Interface
+ */
+$ui-code: map-get($ui, code) !global;
 
-// Loads the SCSS for side menu UI
-$ui-side-menu: true !global !default;
+/**
+ * Includes the classes at main css for Side Menu UI
+ * @type boolean
+ * @link http://www.frontendcore.com/navigation/side-menu.html
+ * @group User Interface
+ */
+$ui-side-menu: map-get($ui, side-menu) !global;
 
-// Loads the SCSS for stats UI
-$ui-stats: true !global !default;
+/**
+ * Includes the classes at main css for Stats tables UI
+ * @type boolean
+ * @link http://www.frontendcore.com/tables/stats-tables.html
+ * @group User Interface
+ */
+$ui-stats: map-get($ui, stats ) !global;
 
-// Loads the SCSS for animations
-$ui-animations: true !global !default;
+/**
+ * Includes the classes at main css for animations UI
+ * @type boolean
+ * @link http://www.frontendcore.com/architecture-css/animations.html
+ * @group User Interface
+ */
+$ui-animations: map-get($ui, animations ) !global;
 
-// Loads the SCSS for autocomplete UI
-$ui-autocomplete: true !global !default;
+/**
+ * Includes the classes at main css for autocomplete UI
+ * @type boolean
+ * @link http://www.frontendcore.com/forms/autocomplete.html
+ * @group User Interface
+ */
+$ui-autocomplete: map-get($ui, autocomplete ) !global;
 
-// Loads the SCSS for tips UI
-$ui-tips: true !global !default;
+/**
+ * Includes the classes at main css for Tips UI
+ * @type boolean
+ * @link http://www.frontendcore.com/callouts/tips.html
+ * @group User Interface
+ */
+$ui-tips: map-get($ui, tips ) !global;
 
-// Loads the SCSS for tips UI
-$ui-carousel: true !global !default;
+/**
+ * Includes the classes at main css for Carousel UI
+ * @type boolean
+ * @link http://www.frontendcore.com/content/carousel.html
+ * @group User Interface
+ */
+$ui-carousel: map-get($ui, carousel ) !global;
 
-$ui-demo: false !global !default;
+/**
+ * Includes the classes at main css for Dynamic tables UI
+ * @type boolean
+ * @link http://www.frontendcore.com/tables/dynamic-table.html
+ * @group User Interface
+ */
+$ui-tables: map-get($ui, tables ) !global;
 
-$ui-tables: true !global !default;
+/**
+ * Includes the classes at main css for Notifications UI
+ * @type boolean
+ * @link http://www.frontendcore.com/callouts/notifications.html
+ * @group User Interface
+ */
+$ui-notifications: map-get($ui, notifications ) !global;
 
-$ui-notifications: true !global !default;
+/**
+ * Includes the classes at main css for Wysiwyg UI
+ * @type boolean
+ * @link http://www.frontendcore.com/forms/wysiwyg.html
+ * @group User Interface
+ */
+$ui-wysiwyg: map-get($ui, wysiwyg ) !global;
 
-$ui-wysiwyg: true !global !default;
+/**
+ * Includes the classes at main css for Sortable UI
+ * @type boolean
+ * @link http://www.frontendcore.com/content/sortable.html
+ * @group User Interface
+ */
+$ui-sortable: map-get($ui, sortable ) !global;
