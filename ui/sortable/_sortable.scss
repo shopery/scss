@@ -1,6 +1,6 @@
-@if $ui-sortable == true {
+@if $ui-sortable == true and $ui == true {
 
-	.sortable {
+	.js-sortable {
 		& {
 			position: relative;
 		}

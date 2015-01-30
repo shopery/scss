@@ -1,4 +1,4 @@
-@if $ui-tables == true {
+@if $ui-tables == true and $ui == true {
 
 	.dynatable-search {
 		& {

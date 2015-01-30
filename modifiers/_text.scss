@@ -22,31 +22,34 @@ t = top
 b = bottom
 */
 
-.va-m {
-	vertical-align: middle !important;
-}
-.va-b {
-	vertical-align: bottom !important;
-}
-.va-t {
-	vertical-align: top !important;
-}
-.ta-l {
-	text-align: left !important;
-}
+@if $ui != true {
 
-.ta-c {
-	text-align: center !important;
-}
+	.va-m {
+		vertical-align: middle !important;
+	}
+	.va-b {
+		vertical-align: bottom !important;
+	}
+	.va-t {
+		vertical-align: top !important;
+	}
+	.ta-l {
+		text-align: left !important;
+	}
 
-.ta-r {
-	text-align: right !important;
-}
+	.ta-c {
+		text-align: center !important;
+	}
 
-.td-u {
-	text-decoration:underline !important;
-}
+	.ta-r {
+		text-align: right !important;
+	}
 
-.td-n {
-	text-decoration:none !important;
+	.td-u {
+		text-decoration: underline !important;
+	}
+
+	.td-n {
+		text-decoration: none !important;
+	}
 }
