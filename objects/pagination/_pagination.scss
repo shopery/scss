@@ -1,11 +1,18 @@
 @if $object-pagination != false and $ui != true {
+
 	.pagination {
 		& {
 			overflow: hidden;
 			margin-bottom: $spacing/2;
 			clear: both;
 			width: auto;
-			text-align: center;
+			text-align: map-get($object-pagination-vars, text-align);
+			color: map-get($object-pagination-vars, color);
+			padding: map-get($object-pagination-vars, padding);
+			background: map-get($object-pagination-vars, background-color);
+			font-family: map-get($object-pagination-vars, font-family);
+			@include rem-fallback(font-size, map-get($object-pagination-vars, font-size) );
+
 		}
 		&.right {
 			float: right;
@@ -21,33 +28,32 @@
 		a {
 			& {
 				display: block;
-				padding: $spacing/4 $spacing/4;
+				padding: map-get($object-pagination-vars, padding-page);
 				line-height: 100%;
+				@if (map-get($object-pagination-vars, min-width) != 'false') {
+					min-width: map-get($object-pagination-vars, min-width-page);
+				}
 				margin-bottom: $spacing/4;
 				text-decoration: none;
-				font-weight: bold;
-			}
-		}
-	}
-}
-
-@if $object-pagination == default and $ui != true {
-	.pagination {
-		a {
-			& {
-				color: $color-foreground;
-				@include background-transparent($color-foreground, .05);
-				border: 1px solid $color-box;
+				font-weight: map-get($object-pagination-vars, font-weight);
+				@include border-radius(map-get($object-pagination-vars, border-radius-page));
+				color: map-get($object-pagination-vars, color);
+				background-color: map-get($object-pagination-vars, background-color-page);
+				border-width: map-get($object-pagination-vars, border-width-page);
+				border-style: map-get($object-pagination-vars, border-style-page);
+				border-color: map-get($object-pagination-vars, border-color-page);
 			}
 			&:hover {
-				background: $color-link;
-				color: contrast-color($color-link);
+				background: map-get($object-pagination-vars, background-color-hover);
+				color: map-get($object-pagination-vars, color-hover);
 			}
 		}
 		.active {
 			a {
-				background: $color-background;
-				color: $color-foreground;
+				background: map-get($object-pagination-vars, background-color-active);
+				color: map-get($object-pagination-vars, color-active);
+				border-color: map-get($object-pagination-vars, border-color-active);
+				font-weight: map-get($object-pagination-vars, font-weight-active);
 			}
 		}
 	}
