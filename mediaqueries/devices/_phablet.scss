@@ -1,0 +1,19 @@
+@mixin phablet-core {
+
+	@if $ui != true {
+
+	  @include device-display-query('phablet');
+
+
+	  @include mobile-tabs;
+
+		@include phablet-grid;
+
+		@include mobile-header;
+
+		@include mobile-tables;
+
+		@include baby-headings;
+
+	}
+}
